@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./FZBaiZRZTJW.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .hello {
     width: 300px;
     height: 300px;
     color: red;
+    font-family: 'MyFont';
     background-image: url("./1.webp");
 }
