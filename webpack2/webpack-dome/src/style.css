@@ -1,14 +1,16 @@
 @font-face {
     font-family: 'MyFont';
-    src: url('./FZBaiZRZTJW.ttf') format('ttf');
-    font-weight: 600;
+    src: url('./my-font.woff2') format('woff2'),
+    url('./my-font.woff') format('woff');
+    font-weight: 800;
     font-style: normal;
+    font-size: 30px;
 }
 
 .hello {
     width: 300px;
     height: 300px;
-    color: red;
-    font-family: 'MyFont';
+    /* color: red; */
+    font-family: 方正白舟忍者体 简;
     background-image: url("./1.webp");
 }
