@@ -43,6 +43,5 @@ body {
 .bigbox .box div:nth-child(2) {
   width: 300px;
   height: 300px;
-  border: 1px solid orangered;
   border-radius: 20px;
 }
