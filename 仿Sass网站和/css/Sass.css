@@ -1,0 +1,313 @@
+body {
+    min-width: 1200px;
+}
+
+header {
+    width: 100vw;
+    height: 50px;
+    background-color: #C69;
+    border: 1PX solid #C69;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+}
+
+.navigation {
+    box-sizing: border-box;
+    width: 1170px;
+    height: 50px;
+    padding: 0 15px;
+    line-height: 50px;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 头部导航栏左侧 css样式*/
+.navigation .navigation_left a {
+    padding: 15px;
+    padding-left: 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    color: #e8e8e8;
+}
+
+.navigation .navigation_left a:hover {
+    color: #fff;
+}
+/* 头部导航栏左侧 css样式 end */
+
+/* 头部导航栏右侧 css样式 */
+.navigation .navigation_right {
+    box-sizing: border-box;
+    width: 728px;
+    height: 50px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #e8e8e8;
+    display: flex;
+}
+
+.navigation .navigation_right a {
+    /* box-sizing: border-box; */
+    padding: 15px;
+    color: #e8e8e8;
+}
+
+.navigation .navigation_right a:hover {
+    color: #fff;
+}
+
+.navigation .navigation_right li:last-child {
+    position: relative;
+}
+
+.navigation .navigation_right li:last-child span {
+    display: block;
+    border-width: 4px 4px 0 4px;
+    border-style: solid;
+    border-color: #e8e8e8 transparent transparent transparent;
+    position: absolute;
+    top: 24px;
+    right: 6px;
+}
+
+.navigation .navigation_right .positionbox {
+    width: 158px;
+    height: 52px;
+    line-height: 16px;
+    padding: 5px 0;
+    border: 1px solid;
+    border-radius: 2px;
+    position: absolute;
+    top: 51px;
+    right: 5px;
+    display: none;
+}
+
+.navigation .navigation_right .positionbox a {
+    display: block;
+    width: 118px;
+    height: 20px;
+    padding: 3px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: right;
+    color: black;
+}
+
+.navigation .navigation_right li:target>a {
+    color: #fff;
+}
+
+.navigation .navigation_right li:target .positionbox {
+    display: block;
+}
+/* 头部导航栏右侧 css样式 end */
+
+/* Sass页面第1部分 css样式 */
+.main1 {
+    width: 100vw;
+    height: 500px;
+    margin-top: 52px;
+    padding: 48px 0;
+    background-color: #C69;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main1 h3 {
+    margin: 20px 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500px;
+}
+
+.main1 .anzhuang {
+    /* height: 40px; */
+    /* padding: 0 16px; */
+    margin-bottom: 20px;
+    /* line-height: 40px; */
+    border: 2px solid #efbfbf;
+    border-radius: 2px;
+}
+
+.main1 .anzhuang a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 18px;
+    color: #efbfbf;
+}
+
+.main1 .anzhuang a:hover {
+    color: #fff;
+}
+
+.main1 .anzhuang:hover {
+    border-color: #fff;
+}
+/* Sass页面第1部分 css样式 end */
+
+/* Sass页面第2部分 css样式 */
+.main2 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.main2 .row {
+    box-sizing: border-box;
+    width: 1170px;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main2 .row .row_box {
+    box-sizing: border-box;
+    width: 360px;
+    flex: 1 1 360px;
+    height: 148px;
+    padding: 0 15px;
+}
+
+.main2 .row .row_box:nth-child(1),
+.main2 .row .row_box:nth-child(4) {
+    padding-left: 9px;
+    padding-right: 21px;
+}
+
+.main2 .row h2 {
+    margin: 20px 0 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.main2 .row p {
+    width: 360px;
+    line-height: 1.4;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+.main2 .row p a {
+    color: #C69;
+}
+
+.main2 .row p a:hover {
+    color: rgb(99,82,124);
+}
+/* Sass页面第2部分 css样式 end */
+
+/* Sass页面第3部分 css样式 */
+.main3 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main3 .all_title {
+    width: 1140px;
+    flex: 0 0 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main3 .all_title .title {
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #333;
+    font-weight: 500;
+}
+
+.main3 .all_title .text {
+    color: #818181;
+    font-size: 12px;
+}
+
+.main3 .partner {
+    width: 1140px;
+    height: 132px;
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main3 .partner a {
+    margin: 20px 10px;
+}
+
+.main3 .partner a:hover {
+    margin-top: 10px;
+    box-shadow: 0px 3px 15px 3px rgba(133, 128, 128, 0.5);
+    transition: 0.5s;
+}
+
+.main3 .tu {
+    width: 1140px;
+}
+
+.main3 .tu img {
+    width: 1130px;
+    margin-left: 8px;
+}
+/* Sass页面第3部分 css样式 end */
+
+/* 最后底部部分 css样式 */
+footer {
+    height: 50px;
+    margin-top: 20px;
+    line-height: 50px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+
+footer div,
+footer div a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #aaa;
+}
+
+footer div a:hover {
+    color: #C69;
+}
+/* 最后底部部分 css样式 end */
+
+/* 返回顶部 */
+.back {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    top: auto;
+    bottom: 46px;
+    /* background-color: #fff; */
+    border: 1px solid rgb(148, 142, 142);
+    border-radius: 8px;
+    z-index: 2
+}
+
+.back a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 50px;
+    color: #C69;
+    border-radius: 7px;
+}
+
+.back a:hover {
+    color: #fff;
+    background-color: #C69;
+    transition: 1s;
+}

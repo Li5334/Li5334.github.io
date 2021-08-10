@@ -1,0 +1,54 @@
+/* 设置左浮动 */
+.f_left {
+    float: left;
+}
+
+/* 设置右浮动 */
+.f_right {
+    float: right;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    /* 设置伪元素必须要设置content属性 */
+    content: "";
+    /* 将伪元素转成块级元素 */
+    display: block;
+    /* 使用clear属性，取值为both，清除左右两侧的浮动 */
+    clear: both;
+}
+
+/* 兼容IE 6/7  */
+.clearfix {
+    zoom: 1;
+}
+
+a {
+    /* 设置a标签的字体颜色为黑色 */
+    color: #000;
+    /* 去掉a标签的默认下划线效果 */
+    text-decoration: none;
+}
+
+/* 让块级元素在水平方向居中 */
+.wrap {
+    width: 1220px;
+    /* 设置最小宽度值 更正最小宽度值为1220px  */
+    min-width: 1220px;
+    margin: 0 auto;
+}
+
+/* 图片自适应 给img标签设置该类名  */
+.auto-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+input,
+button {
+    padding: 0;
+    outline: none;
+    border: 0;
+}

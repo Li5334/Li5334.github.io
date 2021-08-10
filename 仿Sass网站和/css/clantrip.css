@@ -1,0 +1,985 @@
+/* 头部导航栏 css样式 */
+header {
+    width: 100vw;
+    height: 50px;
+    padding: 15px 0;
+    border-bottom: 2px solid #0ba1e4;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    z-index: 1000;
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
+    top: 0;
+}
+
+header .navigation {
+    width: 970px;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header .navigation ul li {
+    float: left;
+    
+}
+
+header .navigation ul li a {
+    padding: 16px 25px 5px;
+    font-size: 16px;
+    color: #777;
+}
+
+header .navigation ul li a:hover {
+    color: #0ba1e4;
+}
+/* 头部导航栏 css样式 end */
+
+/* 不太会的头部轮播图 css样式 */
+.headerbox {
+    width: 100%;
+    height: 540px;
+    margin-top: 82px;
+    /* overflow: hidden; */
+}
+
+.photo {
+    width: 100vw;
+    height: 540px;
+    /* animation: switch 10s ease-out infinite;
+    animation-direction:alternate; */
+}
+
+.photo img {
+    /* display: inline-block; */
+    /* float: left; */
+    width: 100vw;
+    height: 540px;
+}
+
+/* .photo img:last-child { */
+    /* float: right; */
+    /* width: 1920px; */
+    /* height: 540px; */
+    /* position: fixed;
+    top: 10; */
+    /* z-index: 100; */
+/* } */
+
+/* @keyframes switch {
+    0%, 25% {
+        margin-left: 0;
+    }
+    35%, 60% {
+        margin-left: 0px;
+    }
+    70%,100% {
+        margin-left: -1920px;
+    }
+} */
+
+/* 不太会的头部轮播图 css样式 end */
+
+/* 第1个中部 css样式 */
+.main {
+    width: 100vw;
+    /* height: 334px; */
+    padding: 50px 0;
+    background-color: #F8F8F8;
+    text-align: center;
+}
+
+.main h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.main>p:nth-child(2) {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 26px;
+    border: 1px solid #0ba1e4;
+}
+
+.main>p:nth-child(3) {
+    font-size: 19.5px;
+    font-weight: 300;
+    color: #777;
+}
+
+.main ul {
+    width: 970px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.main ul li {
+    width: 242.5px;
+    height: 144px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.main ul li p {
+    font-family: "Roboto", Arial, Tahoma, sans-serif;
+    font-size: 70px;
+    line-height: 1.5em;
+    color: #0ba1e4;
+}
+
+.main ul li h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #919191;
+}
+/* 第1个中部 css样式 end */
+
+/* 第2个中部 css样式 */
+.main2 {
+    width: 100vw;
+    height: 471px;
+    padding: 50px 0;
+    background-color: #e1e1e1;
+    text-align: center;
+}
+
+.main2 h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.main2>p:nth-child(2) {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 26px;
+    border: 1px solid #0ba1e4;
+}
+
+.main2>p:nth-child(3) {
+    font-size: 19.5px;
+    font-weight: 300;
+    color: #777;
+}
+
+.main2 ul {
+    width: 940px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.main2 ul li {
+    float: left;
+    width: 190.5px;
+    height: 259px;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #c1c1c1;;
+    background-color: #FAFAFA;
+    background-repeat: no-repeat;
+    background-position: 45px 25px;
+    
+}
+
+.main2 ul li p {
+    margin-top: 150px;
+    font-size: 24px;
+    font-weight: 300
+}
+
+.main2 ul li h4 {
+    margin-top: 10px;
+    font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #333;
+}
+
+.main2 ul li:hover {
+    color: #fff;
+    background-color: #0BA1E4;
+}
+
+.main2 ul li:hover h4 {
+    color: #fff;
+    background-color: #0BA1E4;
+}
+
+.main2 ul li:first-child {
+    background-image: url(../images/shizhon1.png);
+}
+
+.main2 ul li:first-child:hover {
+    background-image: url(../images/shizhon2.png);
+}
+
+.main2 ul li:nth-of-type(2) {
+    background-image: url(../images/shizi1.png);
+}
+
+.main2 ul li:nth-of-type(2):hover {
+    background-image: url(../images/shizi2.png);
+}
+
+.main2 ul li:nth-of-type(3) {
+    background-image: url(../images/quan1.png);
+}
+
+.main2 ul li:nth-of-type(3):hover {
+    background-image: url(../images/quan2.png);
+}
+
+.main2 ul li:nth-of-type(4) {
+    margin-right: 0;
+    background-image: url(../images/dianzan1.png);
+}
+
+.main2 ul li:nth-of-type(4):hover {
+    margin-right: 0;
+    background-image: url(../images/dianzan2.png);
+}
+
+/* 第2个中部 css样式 end */
+
+/* 第3个中部 css样式 */
+.main3 {
+    width: 100vw;
+    height: 767px;
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.main3 h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.main3>p:nth-child(2) {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 26px;
+    border: 1px solid #0ba1e4;
+}
+
+.main3>p:nth-child(3) {
+    font-size: 19.5px;
+    font-weight: 300;
+    color: #777;
+}
+
+.main3 ul {
+    width: 940px;
+    /* height: 449px; */
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.main3 ul li {
+    float: left;
+    width: 225px;
+    height: 449px;
+    margin-top: 30px;
+    background-color: #FAFAFA;
+    border: 1px solid #c1c1c1;
+}
+
+.main3 ul li .card1 {
+    width: 225px;
+    /* box-sizing: border-box; */
+    height: 64px;
+    padding: 20px 0;
+    line-height: 31px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.main3 ul li .card1 p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0ba1e4;
+}
+
+.main3 ul li .card1 p:last-child {
+    font-size: 14px;
+}
+
+.main3 ul li .card2 {
+    width: 225px;
+    /* box-sizing: border-box; */
+    height: 294px;
+    padding: 20px 0;
+}
+
+.main3 ul li .card2 p {
+    margin-bottom: 10px;
+    line-height: 42px;
+    font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.main3 ul li .card2 p a {
+    padding: 6px 20px;
+    color: #0ba1e4;
+    border: 1px solid #0ba1e4;
+    border-radius: 4px;
+}
+
+.main3 ul li:hover {
+    color: #fff;
+    background-color: #0ba1e4;
+    /* margin: -40px; */
+    box-shadow: 0 8px 15px 8px rgba(55, 153, 233, 0.5);
+    transform:scale(1.1);
+    transition: 0.6s;
+}
+
+.main3 ul li:hover p {
+    color: #fff;
+    /* background-color: #0ba1e4; */
+}
+
+.main3 ul li:hover .card1 p:first-child {
+    color: #fff;
+    /* background-color: #0ba1e4; */
+}
+
+.main3 ul li:hover .card2 p a {
+    color: #fff;
+    background-color: #0ba1e4;
+    border-color: #fff;
+}
+
+.main3 ul li .card2 p a:hover {
+    color: #0ba1e4;
+    background-color: #fff;
+}
+
+.main3 .fuwu {
+    margin-top: 70px;
+}
+
+.main3 .fuwu a {
+    padding: 10px 16px;
+    color: #0ba1e4;
+    border: 1px solid #0ba1e4;
+    border-radius: 6px;
+}
+
+.main3 .fuwu a:hover {
+    color: #fff;
+    background-color: #0ba1e4;
+    transition: 0.3s;
+}
+/* 第3个中部 css样式 end */
+
+/* 第4个中部 css样式 */
+.main4 {
+    width: 100vw;
+    height: 450px;
+    padding: 50px 0;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.main4 h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.main4>p:nth-child(2) {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 26px;
+    border: 1px solid #0ba1e4;
+}
+
+.main4>p:nth-child(3) {
+    font-size: 19.5px;
+    font-weight: 300;
+    color: #777;
+}
+
+.main4 ul {
+    width: 970px;
+    /* height: 449px; */
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.main4 ul li {
+    float: left;
+    width: 293.328px;
+    height: 260px;
+    padding: 30px 15px;
+    position: relative;
+}
+
+.main4 ul li>img {
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 135px;
+}
+
+.main4 ul li .penjia {
+    width: 289.328px;
+    height: 156px;
+    padding: 1px;
+    border: 1px solid #34a263;
+    border-radius: 4px;
+}
+
+.main4 ul li .penjia p {
+    box-sizing: border-box;
+    margin-top: 26px;
+    padding: 9px 14px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+    text-align: left;
+}
+
+.main4 ul li .penjia .penjiabox {
+    padding: 0 14px;
+}
+
+.main4 ul li .penjia .penjiabox span:first-child {
+    background-color: #aaa;
+    color: #fff;
+    padding: .5% 3.5%;
+    font-size: 12px;
+    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+}
+
+.main4 ul li .penjia .penjiabox span:last-child {
+    font-size: 12px;
+    color: #aaa;
+    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+}
+
+.main4 ul li div img {
+    margin-top: 30px;
+}
+/* 第4个中部 css样式 end */
+
+/* 第5个中部 css样式 */
+.main5 {
+    width: 100vw;
+    height: 507px;
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.main5 h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.main5>p:nth-child(2) {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 26px;
+    border: 1px solid #0ba1e4;
+}
+
+.main5>p:nth-child(3) {
+    font-size: 19.5px;
+    font-weight: 300;
+    color: #777;
+}
+
+.main5 ul {
+    width: 970px;
+    /* height: 449px; */
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.main5 ul li {
+    float: left;
+    width: 455px;
+    padding: 0 15px;
+    margin-bottom: 50px;
+}
+
+.main5 ul li .zixun1 a {
+    display: block;
+    box-sizing: border-box;
+    width: 140px;
+    height: 110px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.main5 ul li .zixun1 img {
+    width: 130px;
+    height: 100px;
+}
+
+.main5 ul li .zixun2 {
+    width: 305px;
+    height: 102px;
+    padding: 5px 0;
+    margin-left: 10px;
+}
+
+.main5 ul li .zixun2 h4 {
+    width: 305px;
+    height: 19px;
+    font-weight: 300;
+    font-size: 18px;
+    color: #0ba1e4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main5 ul li .zixun2>span {
+    display: block;
+    margin: 5px 0;
+    color: #999;
+    font-size: 12px;
+    text-align: left;
+    font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif;
+}
+
+.main5 ul li .zixun2 p {
+    width: 305px;
+    height: 36px;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+    font-size: 12px;
+    color: #919191;
+    white-space:wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main5 ul li .zixun2 div span {
+    color: #999;
+    font-size: 12px;
+}
+
+.main5 div a {
+    color: #337ab7;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.main5 div a:hover {
+    color: #072f52;
+    text-decoration:underline;
+}
+/* 第5个中部 css样式 end */
+
+/* 第6个中部 css样式 */
+.main6 {
+    width: 100vw;
+    height: 350px;
+    padding: 50px 0;
+    background-color: #e1e1e1;
+    text-align: center;
+}
+
+.main6 h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.main6>p:nth-child(2) {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 26px;
+    border: 1px solid #0ba1e4;
+}
+
+.main6>p:nth-child(3) {
+    font-size: 19.5px;
+    font-weight: 300;
+    color: #777;
+}
+
+.main6 ul {
+    width: 970px;
+    /* height: 449px; */
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.main6 ul li {
+    float: left;
+    width: 129.656px;
+    height: 62.734px;
+    margin-right: 25px;
+    margin-bottom: 40px;
+    border: 1px solid #c1c1c1;
+}
+
+.main6 ul li:nth-child(6n) {
+    margin-right: 0;
+}
+
+.main6 ul li:nth-child(1),
+.main6 ul li:nth-child(7) {
+    margin-left: 16px;
+}
+
+.main6 ul li img {
+    width: 129.656px;
+    height: 62.734px;
+}
+/* 第6个中部 css样式 end */
+
+/* 第7个中部 css样式  */
+.main7 {
+    width: 100vw;
+    height: 200px;
+    padding: 50px 0;
+    background-color: #4c99f0;
+    text-align: center;
+}
+
+.main7 h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.main7>p:nth-child(2) {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+}
+
+.main7>p:nth-child(3) {
+    font-size: 19.5px;
+    font-size: 18px;
+    font-weight: 300;
+    color:#f1f1f1;
+}
+
+.main7>p:nth-child(4) {
+    margin-top: 50px;
+}
+
+.main7>p:nth-child(4) a {
+    padding: 10px 30px;
+    font-size: 24px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+}
+/* 第7个中部 css样式 end */
+
+/* 第8个中部 css样式 */
+.main8 {
+    width: 100vw;
+    height: 240px;
+    background-color: #363636;;
+    text-align: center;
+}
+
+.main8 ul {
+    width: 970px;
+    /* height: 449px; */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.main8 .hao>li {
+    float: left;
+    box-sizing: border-box;
+    width: 159.656px;
+    height: 160px;
+    margin: 40px 0;
+    padding: 10px 15px 10px 14px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #f5f5f5;
+    border-left: 2px solid #c1c1c1;
+}
+
+.main8 .hao li ol {
+    margin-top: 30px;
+}
+
+/* .main8 .hao li ol li {
+    margin-top: 20px;
+}  */
+
+.main8 .hao li ol li a {
+    color: #f5f5f5;
+    line-height: 2.3em;
+    /* font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif; */
+    font-size: 14px;
+    font-weight: 500px;
+} 
+
+.main8 .hao>li:nth-child(4) {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #f5f5f5;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+.main8 .hao>li:nth-child(4) img {
+    width: 130px;
+    height: 130px;
+}
+
+.main8 .hao>li:nth-child(5) {
+    width: 315px;
+    padding-right: 15px;
+    border-right: 2px solid #c1c1c1;
+}
+
+.main8 .hao>li:nth-child(5) div {
+    width: 280px;
+    height: 52px;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.main8 .hao>li:nth-child(5) div span {
+    vertical-align: middle;
+}
+
+.main8 .hao>li:nth-child(5) div img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/* 第8个中部 css样式 end */
+
+/* footer底部  */
+footer {
+    width: 100vw;
+    height: 125px;
+    box-sizing: border-box;
+    /* padding: 20px 0; */
+    position: absolute;
+    background-color: #666;
+    text-align: center;
+}
+
+footer .banquan {
+    width: 1000px;
+    height: 125px;
+    margin: 0 auto;
+}
+
+footer .banquan div {
+    height: 40px;
+    /* margin-top: 20px; */
+    font-size: 13px;
+    line-height: 40px;
+    color: #fafafa;
+}
+
+footer .banquan div:first-child {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+footer .banquan div a {
+    font-size: 13px;
+    color: #fafafa;
+    
+}
+
+footer .banquan div a span {
+    vertical-align: middle;
+}
+
+footer .banquan div a img {
+    margin-right:5px ;
+    vertical-align: middle;
+}
+/* footer底部 end */
+
+/* 右边固定定位 */
+
+.clan {
+    width: 50px;
+    height: 300px;
+    /* background-color: orangered; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.clan ul li {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
+    background-color: #f5f5f5;
+    position: relative;
+    /* background-color: gray; */
+}
+
+.clan ul li a {
+    display: block;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+    border: 1px solid #0ba1e4;
+    /* background-color: #f5f5f5; */
+    background-repeat: no-repeat;
+}
+
+.clan ul li:first-child a {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: 0 -90px;
+}
+
+.clan ul li:first-child a:hover {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: -46px -90px;
+}
+
+.clan ul li:first-child a:hover~.zixunbox {
+    display: block;
+}
+
+.clan ul li:first-child .zixunbox {
+    position: absolute;
+    right: 48px;
+    bottom: 0px;
+    width: 70px;
+    height: 48px;
+    padding-left: 10px;
+    line-height: 48px;
+    color: #fff;
+    background-color: #0ba1e4;
+    display: none;
+}
+
+.clan ul li:nth-child(2) a {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: 0 -135px;
+}
+
+.clan ul li:nth-child(2) a:hover {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: -46px -135px;
+}
+
+.clan ul li:nth-child(2) a:hover~.qq {
+    display: block;
+}
+
+.clan ul li:nth-child(2) .qq {
+    position: absolute;
+    right: 48px;
+    bottom: 0px;
+    width: 60px;
+    height: 48px;
+    padding-left: 10px;
+    line-height: 48px;
+    color: #fff;
+    background-color: #0ba1e4;
+    display: none;
+}
+
+.clan ul li:nth-child(3) a {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: 0 -180px;
+}
+
+.clan ul li:nth-child(3) a:hover {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: -46px -180px;
+}
+
+.clan ul li:nth-child(3) a:hover~.mod {
+    display: block;
+}
+
+.clan ul li:nth-child(3) .mod {
+    position: absolute;
+    right: 48px;
+    bottom: 0px;
+    width: 120px;
+    height: 48px;
+    padding-left: 10px;
+    line-height: 48px;
+    color: #fff;
+    background-color: #0ba1e4;
+    display: none;
+}
+
+.clan ul li:nth-child(4) a {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: 0 -230px;
+}
+
+.clan ul li:nth-child(4) a:hover {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: -46px -230px;
+}
+
+.clan ul li:nth-child(4) a:hover~div {
+    display: block;
+}
+
+.clan ul li:nth-child(4) .wechat {
+    position: absolute;
+    right: 48px;
+    bottom: 0px;
+    display: none;
+}
+
+.clan ul li:nth-child(4) .wechat img {
+    width: 150px;
+    border: 1px solid #0BA1E4;
+}
+
+.clan ul li:nth-child(5) a {
+    background-image: url(../imagess/clan-slider.png);
+    /* background-position: 0 -230px; */
+}
+
+.clan ul li:nth-child(5) a:hover {
+    background-image: url(../imagess/clan-slider.png);
+    background-position: -46px 0px;
+    
+}
+
+.clan ul li:hover {
+    background-color: #0ba1e4;
+}
