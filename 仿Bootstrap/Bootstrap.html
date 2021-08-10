@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #b0b0b0;
+        }
+
+        .header {
+            width: 100%;
+            height: 42px;
+            position: fixed;
+            background-color: black;
+            color: #9D9D9D;
+        }
+
+        .header .header_box {
+            width: 1160px;
+            line-height: 42px;
+            margin: 0px auto;
+            font-size: 14px;
+        }
+
+        .header .header_box li:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .header .header_box .one:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .header .header_box ul li {
+            margin-right: 30px;
+            float: left;
+        }
+
+        .header .header_box ul li:first-child {
+            font-size: 17px;
+        }
+
+        .header2 {
+            width: 100%;
+            height: 500px;
+            text-align: center;
+            background-color: pink;
+        }
+
+        .header2 .header2_box {
+            width: 1200px;
+            height: 300px;
+            margin: 0px auto;
+            padding-top: 100px;
+        }
+
+        .header2 .header2_box h1 {
+            font-size: 100px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .header2 .header2_box p:nth-child(2) {
+            margin: 10px 0px;
+            font-size: 30px;
+            font-weight: 200;
+            color: white;
+        }
+
+        .header2 .header2_box p:nth-child(3) {
+            margin: 20px 0px;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: 400px;
+            color: white;
+        }
+
+        .header2 .header2_box p:nth-child(3) a {
+            display: inline-block;
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            background-color: #337ab7;
+            border: 6px solid #337ab7;
+            border-bottom: 8px solid #306594;
+            border-radius: 6px;
+        }
+
+        .header2 .header2_box p:nth-child(4) {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .header2 .header2_box p:nth-child(4):hover {
+            color: white;
+            cursor: pointer;
+            text-decoration: underline
+        }
+
+        .center1 {
+            width: 1200px;
+            height: 150px;
+            margin: 0px auto;
+        }
+
+        .center1_box {
+            width: 680px;
+            height: 100px;
+            margin: 0px auto;
+            margin-top: 40px;
+            border-bottom: 1px solid gray;
+            text-align: center;
+        }
+
+        .center1_box h2 {
+            font-size: 42px;
+            font-weight: 500;
+        }
+
+        .center1_box p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .center2 {
+            height: 8000px;
+        }
+
+        .center2_box {
+            width: 1160px;
+            height: 200px;
+            margin: 0px auto;
+            /* background-color: gray; */
+        }
+
+        .center2_box img {
+            width: 252px;
+        }
+
+        .center2_box li {
+            float: left;
+            margin-right: 35px;
+            padding: 4px;
+            margin-bottom: 15px;
+            border: 1px solid rgb(194, 194, 194);
+        }
+
+        .center2_box li:last-child {
+            margin-right: 0px;
+        }
+
+        .center2_box li div {
+            height: 160px;
+            margin: 10px 0px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .center2_box li div p {
+            width: 240px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .center2_box li div a {
+            font-size: 14px;
+            color: blue;
+        }
+
+        .center2_box li div p:nth-child(2) {
+            margin-bottom: 10px;
+        }
+
+        .center2_box li div p:nth-child(2) a {
+            font-size: 10px;
+            color: gray;
+        }
+
+        /* .center2_box li div p:nth-child(3) {
+            margin-bottom: 50px;
+        } */
+
+        .foots_box {
+            width: 1200px;
+            height: 170px;
+            margin: 0px auto;
+            border-bottom: 1px solid gray;
+            /* background-color: gray; */
+        }
+
+        .foots_box1 {
+            margin-top: 50px;
+            margin-right: 150px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .foots_box1 img {
+            margin-bottom: 10px;
+        }
+
+        .foots_box2 {
+            margin-top: 50px;
+        }
+
+        .foots_box2 li {
+            margin-right: 40px;
+        }
+
+        .foots_box2 li:last-child {
+            margin-right: 0px;
+        }
+
+        .foots_box2 .a {
+            color: #563d7c;
+            font-size: 16px;
+        }
+        .foots_box2 .a ul {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .zuihuo {
+            width: 1200px;
+            height: 50px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+        .zuihuo a {
+            color: #777;
+        }
+        .zuihuo a:hover {
+            text-decoration:underline
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_box clearfix">
+            <ul class="left clearfix">
+                <li>Bootstrap中文网</li>
+                <li>Bootstrap3中文文档</li>
+                <li>Bootstrap4中文文档</li>
+                <li>Sass教程</li>
+                <li>Less教程</li>
+                <li>jQuery API</li>
+                <li>网站实例</li>
+            </ul>
+            <div class="right one">关于</div>
+        </div>
+    </div>
+    <div class="header2">
+        <div class="header2_box">
+            <h1>Bootstrap</h1>
+            <p>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</p>
+            <p><a href="#">Bootstrap3中文文档(v3.4.1)</a> </p>
+            <p>Bootstrap2中文文档(v2.3.2)</p>
+        </div>
+    </div>
+    <div class="center1">
+        <div class="center1_box">
+            <h2>Bootstrap相关优质项目推荐</h2>
+            <p>这些项目或者是对<strong>Bootstrap</strong>进行了有益的补充，或者是基于<strong>Bootstrap</strong>开发的</p>
+        </div>
+    </div>
+    <div class="center2">
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/1-1.png" alt="1"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/1-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/1-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至0.55折，100+款产品飞天会员价低至1.5折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/1-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/2-1.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/2-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/2-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至0.55折，200+款产品飞天会员价低至2.5折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/2-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/3-1.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/3-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/3-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至0.55折，300+款产品飞天会员价低至3.5折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/3-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/4-1.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/4-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/4-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至0.55折，400+款产品飞天会员价低至4.5折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/4-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/5-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/5-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/5-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至0.55折，500+款产品飞天会员价低至5.5折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/5-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/6-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/6-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/6-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/6-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/7-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/7-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/7-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/7-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/8-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/8-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/8-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/8-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/9-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/9-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/9-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/9-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/10-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/10-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/10-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/10-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/11-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/11-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/11-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/11-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/12-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/12-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/12-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/12-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/13-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/13-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/13-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/13-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/14-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/14-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/14-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/14-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/15-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/15-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/15-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/15-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/16-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/16-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/16-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/16-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/17-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/17-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/17-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/17-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/18-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/18-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/18-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/18-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/19-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/19-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/19-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/19-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/20-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/20-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/20-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/20-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/21-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/21-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/21-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/21-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/22-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/22-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/22-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/22-4.png" alt="4"></a>
+                    <div>
+                        <p><a href="#">TypeScript</a></p>
+                        <p><a href="#">中文手册</a></p>
+                        <p>Typescript是由微软开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="center2_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="./image/23-1.png" alt="a"></a>
+                    <div>
+                        <p><a href="#">优站精选</a></p>
+                        <p><a href="#">Bootstrap 网站实例</a></p>
+                        <p>Bootstrap 优站精选频道收集了众多基于Bootstrap构建、设计精美的、有创意的网站。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/23-2.png" alt="2"></a>
+                    <div>
+                        <p><a href="#">webpack</a></p>
+                        <p><a href="#">是前端资源模块化管理和打包工具</a></p>
+                        <p>webpack是当下最热门的前端资源模块化管理和打包工具。它可以将许多朴松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/23-3.png" alt="3"></a>
+                    <div>
+                        <p><a href="#">阿里云</a></p>
+                        <p><a href="#">最全优惠活动聚集地</a></p>
+                        <p>阿里云-全球领先的云计算及人工智能公司。阿里云最全特惠活动聚集于此，云服务器低至1折，100+款产品飞天会员价低至1.1折!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="foots">
+        <div class="foots_box clearfix">
+            <div class="foots_box1 left">
+                <img src="./image/B.png" alt="b">
+                <p>我们一直致力于为广大开发者提供更多的优质技术文档和辅助开发工具!</p>
+            </div>
+            <ul class="foots_box2 left clearfix">
+                <li class="left a">关于
+                    <ul>
+                        <li>关于我们</li>
+                        <li>广告合作</li>
+                        <li>友情链接</li>
+                        <li>招聘</li>
+                    </ul>
+                </li>
+                <li class="left a">联系方式
+                    <ul>
+                        <li>新浪微博</li>
+                        <li>电子邮件</li>
+                    </ul>
+                </li>
+                <li class="left a">旗下网站
+                    <ul>
+                        <li>BootCDN</li>
+                        <li>Packagist中国镜像</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li class="left a">特别致谢
+                    <ul>
+                        <li>猫云</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="zuihuo">
+        <p>
+        <a href="#">京ICP备11008151号-6</a>
+        | 京公网安备11010802014853
+        </p>
+    </div>
+</body>
+
+</html>

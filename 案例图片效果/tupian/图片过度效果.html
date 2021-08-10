@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="lily">
+            <h2>Lily</h2>
+            <div class="imgs">
+                <div class="onleft">
+                    <div class="ziti">
+                        <p class="ptu1">NICE<span>LILY</span></p>
+                        <p class="ptu2">Lily likes to play with crayons and pencils</p>
+                    </div>
+
+                    <div class="zhegai"></div>
+                </div>
+                <div class="onright">
+                    <div class="ziti">
+                        <p class="ptu1">NICE<span>LILY</span></p>
+                        <p class="ptu2">Lily likes to play with crayons and pencils</p>
+                    </div>
+                    <div class="zhegai"></div>
+                </div>
+            </div>
+
+            <!-- <img src="https://www.17sucai.com/preview/11/2014-11-16/HoverEffectIdeas/img/12.jpg" alt=""> -->
+            <!-- <img src="https://www.17sucai.com/preview/11/2014-11-16/HoverEffectIdeas/img/1.jpg" alt=""> -->
+        </div>
+    </div>
+
+    <script>
+        var onleft = document.querySelector(".onleft");
+        var onright = document.querySelector(".onright");
+        var leftzhegai = document.querySelector(".onleft .zhegai");
+        var rightzhegai = document.querySelector(".onright .zhegai");
+        var lifeP = document.querySelectorAll(".onleft .ziti p");
+
+        onleft.onmouseover = function() {
+            // leftzhegai.classList.remove("zhegai");
+            $(".zhegai:eq(0)").remove("zhegai");
+            // $(".ptu1").css("line-height","20px");
+            // console.log(lifeP[0]);
+            $(".ptu1:eq(0)").animate({
+                "line-height":42
+            },1000);
+            $(".ptu2:eq(0)").show(1000);
+        }
+        onleft.onmouseout = function() {
+            // leftzhegai.classList.add("zhegai");
+            $(".zhegai:eq(0)").addClass("zhegai");
+            // $(".ptu1").css("line-height","100px");
+            $(".ptu1:eq(0)").animate({
+                "line-height":100
+            },1000);
+            $(".ptu2:eq(0)").hide(1000);
+        }
+
+        onright.onmouseover = function() {
+            $(".zhegai:eq(1)").remove("zhegai");
+            // $(".ptu1").css("line-height","20px");
+            // console.log(lifeP[0]);
+            $(".ptu1:eq(1)").animate({
+                "line-height":42
+            },1000);
+            $(".ptu2:eq(1)").show(1000);
+        }
+        onright.onmouseout = function() {
+            $(".zhegai:eq(1)").addClass("zhegai");
+            // $(".ptu1").css("line-height","100px");
+            $(".ptu1:eq(1)").animate({
+                "line-height":100
+            },1000);
+            $(".ptu2:eq(1)").hide(1000);
+        }
+    </script>
+</body>
+
+</html>

@@ -143,11 +143,11 @@ inp1.onchange = function (e) {
 };
 
 var arr1 = [
-    "http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_51684799&response=res&type=convert_url&",
-    "http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_140262235&response=res&type=convert_url&",
-    "http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_7095195&response=res&type=convert_url&",
-    "http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_564085&response=res&type=convert_url&",
-    "http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_21763850&response=res&type=convert_url&"];
+    "http://api.kele8.cn/agent/http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_51684799&response=res&type=convert_url&",
+    "http://api.kele8.cn/agent/http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_140262235&response=res&type=convert_url&",
+    "http://api.kele8.cn/agent/http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_7095195&response=res&type=convert_url&",
+    "http://api.kele8.cn/agent/http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_564085&response=res&type=convert_url&",
+    "http://api.kele8.cn/agent/http://antiserver.kuwo.cn/anti.s?useless=/resource/&format=mp3&rid=MUSIC_21763850&response=res&type=convert_url&"];
 var arr2 = ["01:40", "04:02", "05:13", "04:48", "04:17"];
 
 var num3 = 0;
