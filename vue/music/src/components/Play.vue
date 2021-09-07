@@ -5,19 +5,25 @@
       enter-active-class="animate__animated animate__fadeIn"
       leave-active-class="animate__animated animate__fadeOut"
     >
-      <PlayPage
-        v-if="showPlayPage"
-        @toggle-show-play-page="showPlayPage = $event"
-        @toggle-show-play-list="showPlayList = $event"
-        @toggle-playing-state="$emit('toggle-playing-state')"
-        @last-song="$emit('last-song')"
-        @next-song="$emit('next-song')"
-        :currentSong="currentSong"
-        :playing="playing"
-        :currentTime="currentTime"
-        :duration="duration"
-        @current-time-change="$emit('current-time-change',$event)"
-      />
+      <keep-alive>
+        <PlayPage
+          v-if="showPlayPage"
+          @toggle-show-play-page="showPlayPage = $event"
+          @toggle-show-play-list="showPlayList = $event"
+          @toggle-playing-state="$emit('toggle-playing-state')"
+          @last-song="$emit('last-song')"
+          @next-song="$emit('next-song')"
+          :currentSong="currentSong"
+          :playing="playing"
+          :currentTime="currentTime"
+          :duration="duration"
+          :playbackMode="playbackMode"
+          :playBack="playBack"
+          @playback-mode="$emit('playback-mode')"
+          @play-back="$emit('play-back')"
+          @current-time-change="$emit('current-time-change', $event)"
+        />
+      </keep-alive>
     </transition>
 
     <PlayBar
@@ -27,6 +33,8 @@
       :currentTime="currentTime"
       :duration="duration"
       :currentPlayList="currentPlayList"
+      @last-song="$emit('last-song')"
+      @next-song="$emit('next-song')"
       @toggle-playing-state="$emit('toggle-playing-state')"
       @toggle-show-play-list="showPlayList = $event"
       @toggle-show-play-page="showPlayPage = $event"
@@ -59,6 +67,8 @@ export default {
     currentTime: Number,
     duration: Number,
     currentPlayList: Array,
+    playbackMode:Boolean,
+    playBack:Boolean,
   },
   data: function () {
     return {

@@ -63,6 +63,7 @@ export default {
 
 <style lang="less" scoped>
 .hot {
+  padding-top: 130px;
   .bkimg {
     width: 100vw;
     height: 140px;

@@ -70,7 +70,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   .progress-son {
     width: 80vw;
     height: 4px;

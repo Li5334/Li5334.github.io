@@ -2,14 +2,15 @@
   <div v-if="detail" class="play-list">
     <!-- <h2>{{ $route.query.id }}</h2> -->
     <div class="heards">
-      <div class="heardsfh"><router-link to="/"><i class="fa fa-chevron-down"></i></router-link></div>
+      <div class="heardsfh">
+        <router-link to="/"><i class="fa fa-reply"></i></router-link>
+      </div>
       <div
         class="mask"
         :style="{ backgroundImage: `url(${coverImgUrl})` }"
       ></div>
 
       <div class="solo">
-        
         <div class="solocenter">
           <div class="solo-left" v-if="backgroundCoverUrl === null">
             <img
@@ -42,7 +43,9 @@
                 class="user-img"
                 :src="`${creator.avatarUrl}?imageView=1&type=webp&thumbnail=90x0`"
               />
-              <span class="user-name">{{ creator.nickname }}</span>
+              <span v-if="creator" class="user-name">{{
+                creator.nickname
+              }}</span>
             </div>
           </div>
         </div>
@@ -87,6 +90,7 @@ export default {
       creator: null,
       coverImgUrl: null,
       backgroundCoverUrl: null,
+      activatedFlag: false,
     };
   },
   methods: {
@@ -109,6 +113,23 @@ export default {
   created: function () {
     this.getPlayListDetail(this.$route.query.id);
   },
+  // watch: {
+  //   "$route.query.id": function (n) {
+  //     if (n && this.activatedFlag) {
+  //       this.getPlayListDetail(n);
+  //     }
+      // this.detail = this.getPlayListDetail(n);
+      // this.creator = this.getPlayListDetail(n);
+      // this.coverImgUrl = this.getPlayListDetail(n);
+      // this.backgroundCoverUrl = this.getPlayListDetail(n);
+  //   },
+  // },
+  // activated: function () {
+  //   this.activatedFlag = true;
+  // },
+  // deactivated: function () {
+  //   this.activatedFlag = false;
+  // },
   filters: {
     parseCount: function (value) {
       // return value + "0";
@@ -152,7 +173,6 @@ export default {
       i {
         color: rgb(255, 255, 255);
       }
-      
     }
     .mask {
       width: 100%;

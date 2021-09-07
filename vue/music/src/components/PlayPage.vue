@@ -2,7 +2,7 @@
   <section class="play-page">
     <!-- 关闭当前页面 -->
     <div class="dowm" @click="$emit('toggle-show-play-page', false)">
-      <i class="fa fa-chevron-down"></i>
+      <i class="fa fa-reply"></i>
     </div>
     <!-- <button @click="$emit('toggle-show-play-page', false)">playpage</button> -->
     <!-- 背景图遮盖层 -->
@@ -73,6 +73,7 @@
       :playlyric="playlyric"
       :currentSong="currentSong"
       :currentTime="currentTime"
+      :playing="playing"
     />
 
     <!-- 音乐功能 -->
@@ -84,7 +85,20 @@
       />
       <ul class="icon-son">
         <!-- 模式 -->
-        <li><i class="fa fa-exchange"></i></li>
+        <li @click="pattern">
+          <!-- <i :class="[fa, playbackMode ? fa-refresh : fa-exchange]"></i> -->
+          <!-- 顺序播放 -->
+          <i class="fa fa-exchange" v-if="!playbackMode && !playBack"></i>
+          <!-- 单曲循环播放 -->
+          <i class="fa fa-refresh" v-if="playbackMode && !playBack"></i>
+          <!-- 随机播放 -->
+          <i class="fa fa-random" v-if="playBack"></i>
+          <div v-if="playPattern">
+            <i class="fa fa-refresh" @click.stop="$emit('playback-mode');playPattern=false;"></i>
+            <i class="fa fa-exchange" @click.stop="$emit('playback-mode');playPattern=false;"></i>
+            <i class="fa fa-random" @click.stop="$emit('play-back');playPattern=false;"></i>
+          </div>
+        </li>
         <!-- 上一首 -->
         <li @click="$emit('last-song')"><i class="fa fa-backward"></i></li>
         <!-- 播放停止 -->
@@ -115,16 +129,24 @@ export default {
     playing: Boolean,
     currentTime: Number,
     duration: Number,
+    playbackMode: Boolean,
+    playBack:Boolean
   },
   data: function () {
     return {
       playlyric: false,
+      playPattern: false,
     };
+  },
+  methods: {
+    pattern: function () {
+      this.playPattern = !this.playPattern;
+    },
   },
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -140,7 +162,7 @@ export default {
   top: 0;
   left: 0;
   background-color: rgb(66, 64, 63);
-  z-index: 6;
+  z-index: 8;
 
   .dowm {
     width: 30px;
@@ -217,6 +239,8 @@ export default {
     }
     .singer,
     .song-title {
+      width: 80vw;
+      margin: 0 auto;
       font-size: 15px;
       margin-top: 10px;
       text-align: center;
@@ -230,22 +254,44 @@ export default {
   .icon {
     width: 100vw;
     position: fixed;
-    bottom: 30px;
+    bottom: 80px;
     left: 0;
     ul.icon-son {
-      // width: 65vw;
+      width: 85vw;
       margin: 0 auto;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       color: white;
       li {
         width: 50px;
         height: 50px;
-        margin: 0 5px;
+        // margin: 0 5px;
         line-height: 50px;
         text-align: center;
         // background-color: tomato;
         font-size: 25px;
+        &:nth-of-type(1) {
+          position: relative;
+          div {
+            width: 60px;
+            height: 100px;
+            padding: 5px 0;
+            background-color: rgba(184, 181, 181, 0.767);
+            position: absolute;
+            top: -100px;
+            left: -5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 10px;
+          }
+        }
+        &:nth-of-type(3) {
+          font-size: 35px;
+          text-align: center;
+          // border: 1px solid white;
+          // border-radius: 50%;
+        }
       }
     }
   }

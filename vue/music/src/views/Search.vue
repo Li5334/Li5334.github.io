@@ -39,6 +39,9 @@
         </li>
       </ul>
 
+      <div class="eliminate">
+        <span @click="removehistory">清空记录 <i class="fa fa-times"></i></span>
+      </div>
       <ul class="hots-ol">
         <li
           class="ol-li"
@@ -92,11 +95,12 @@
           :item="searchReitem"
           @change-current-song="
             $emit('change-current-song', searchReitem);
-            $emit('change-current-play-list', searchRe);
+            $emit('change-current-play-list', [searchRe[index]]);
           "
+          @change-current-add-song="$emit('change-current-add-song', $event)"
           :currentSongId="currentSongId"
           :playing="playing"
-        ></SongListItem>
+        ><i class="fa fa-plus-square"></i></SongListItem>
       </ul>
 
       <p v-if="!hasMore">全部加载完成</p>
@@ -127,7 +131,7 @@ export default {
       page: 0,
       hasMore: false,
       history: JSON.parse(window.localStorage.getItem("history")) || [],
-      spanValue:'',
+      spanValue: "",
     };
   },
   created: function () {
@@ -165,7 +169,7 @@ export default {
       this.history = [...new Set([...this.history, this.value])];
       window.localStorage.setItem("history", JSON.stringify(this.history));
     },
-    close:function(obj){
+    close: function (obj) {
       // console.log(obj.currentTarget);
       var toggle = obj.currentTarget;
       toggle.parentNode.parentNode.removeChild(toggle.parentNode);
@@ -173,7 +177,16 @@ export default {
       // console.log(obj.currentTarget.previousElementSibling.innerHTML);
       var spanValue = obj.currentTarget.previousElementSibling.innerHTML;
       this.spanValue = spanValue;
+      // this.history.findIndex((item)=>item = spanValue);
+      // console.log(this.history.findIndex((val)=>val = spanValue));
       // this.history = hisval;
+    },
+    removehistory: function () {
+      if(this.history){
+        window.localStorage.clear();
+        this.history = [];
+      }
+      
     },
   },
   watch: {
@@ -211,8 +224,9 @@ export default {
 
 <style lang="less" scoped>
 .hot {
+  padding-top: 130px;
   .inp {
-    padding: 15px 10px;
+    padding: 15px 16px;
     box-shadow: 0 -1px 1px 0px rgb(231, 231, 231) inset;
     .inps {
       display: flex;
@@ -264,6 +278,23 @@ export default {
       font-size: 12px;
       line-height: 12px;
       color: #666;
+    }
+    .eliminate {
+      padding-right: 3px;
+      display: flex;
+      justify-content: flex-end;
+      span {
+        display: inline-block;
+        width: 90px;
+        height: 20px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color: rgb(214, 211, 206);
+        i {
+          color: rgb(126, 126, 126);
+        }
+      }
     }
     .hots-list {
       margin: 10px 0 7px;
@@ -334,6 +365,23 @@ export default {
           line-height: 45px;
           font-size: 15px;
           box-shadow: 0 -1px 1px 0px rgb(231, 231, 231) inset;
+        }
+      }
+    }
+  }
+
+  .searchRe {
+    .hots-title {
+      margin-top: 5px;
+      margin-left: 14px;
+      font-size: 20px;
+      color: rgb(223, 81, 37);
+    }
+    ul {
+      li {
+        i {
+          font-size: 20px;
+          color: #f12d2359;
         }
       }
     }

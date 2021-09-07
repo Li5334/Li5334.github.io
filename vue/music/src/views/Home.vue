@@ -15,7 +15,7 @@
 
     <ul>
       <!-- SongListItem组件，此处用于最新音乐列表 -->
-      <SongListItem
+      <SongListtwo
         v-for="item in newsongs"
         :key="item.id"
         :item="item"
@@ -25,7 +25,7 @@
         "
         :currentSongId="currentSongId"
         :playing="playing"
-      ></SongListItem>
+      ></SongListtwo>
     </ul>
   </div>
 </template>
@@ -34,14 +34,14 @@
 // @ is an alias to /src
 import CardItem from "@/components/CardItem.vue";
 import HomeTitle from "@/components/HomeTitle.vue";
-import SongListItem from "@/components/SongListItem.vue";
+import SongListtwo from "@/components/SongListtwo.vue";
 
 export default {
   name: "Home",
   components: {
     CardItem,
     HomeTitle,
-    SongListItem,
+    SongListtwo,
   },
   props: {
     currentSongId: {
@@ -77,9 +77,13 @@ export default {
 </script>
 
 <style  lang="less" scoped>
+.home {
+  padding-top: 130px;
+}
 .home-cardlist {
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
 }
+
 </style>

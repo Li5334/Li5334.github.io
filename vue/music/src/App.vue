@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    <HeadIcon v-if="$route.meta.showNavBar" />
+    <HeadIcon v-if="$route.meta.showNavBar" class="headicon" />
     <ul id="nav" v-if="$route.meta.showNavBar">
       <li><router-link to="/">推荐音乐</router-link></li>
       <li><router-link to="/hot">热歌榜</router-link></li>
       <li><router-link to="/search">搜索</router-link></li>
     </ul>
-    <section class="routes">
+    <section class="routes" :class="{ homehight: showhight }">
       <transition
         name="custom-classes-transition"
-        enter-active-class="animate__animated animate__backInDown"
-        leave-active-class="animate__animated animate__bounceOutDown"
+        enter-active-class="animate__animated animate__slideInRight"
+        leave-active-class="animate__animated animate__slideOutLeft"
       >
+        <!-- <keep-alive> -->
         <router-view
           @change-current-song="changeCurrentSong"
           @change-current-play-list="changeCurrentPlayList"
+          @change-current-add-song="changeCurrentAddSong"
           :currentSongId="currentSong ? currentSong.id : null"
           :playing="playing"
           style="
@@ -25,7 +27,9 @@
             height: 100%;
             overflow-y: auto;
           "
+          :class="{ homehight: showhight }"
         />
+        <!-- </keep-alive> -->
       </transition>
     </section>
     <!-- controls显示audio autoplay自动播放 -->
@@ -47,11 +51,18 @@
       :currentTime="currentTime"
       :duration="duration"
       :currentPlayList="currentPlayList"
+      :playbackMode="playbackMode"
+      :playBack="playBack"
       @toggle-playing-state="togglePlayingState"
       @change-current-song="changeCurrentSong"
       @last-song="lastSong"
       @next-song="nextSong"
       @current-time-change="$refs.audio.currentTime = $event"
+      @playback-mode="
+        playbackMode = !playbackMode;
+        playback = false;
+      "
+      @play-back="playBack = true"
     ></Play>
   </div>
 </template>
@@ -68,6 +79,9 @@ export default {
       currentTime: 0,
       duration: 0,
       currentPlayList: [],
+      showhight: false,
+      playbackMode: false,
+      playBack: false,
     };
   },
   computed: {
@@ -80,13 +94,43 @@ export default {
       }
     },
   },
+  watch: {
+    currentTime: function (n) {
+      if (n == this.duration && !this.playbackMode && !this.playBack) {
+        var index = this.currentPlayList.findIndex((item) => {
+          return item.id === this.currentSong.id;
+        });
+        index++;
+        index = index >= this.currentPlayList.length - 1 ? 0 : index;
+        index = index <= 0 ? 0 : index;
+        this.changeCurrentSong(this.currentPlayList[index]);
+      } else if (n == this.duration && this.playbackMode && !this.playBack) {
+        // this.currentSong = {};
+        // var inde = this.currentPlayList.findIndex((item) => {
+        //   return item.id === this.currentSong.id;
+        // });
+        // this.currentSong = this.currentPlayList[inde];
+        // this.changeCurrentSong(this.currentPlayList[inde]);
+        this.$refs.audio.play();
+      } else if (n == this.duration && this.playBack) {
+        var num = this.currentPlayList.length;
+        var i = this.getRandomInt(0, num);
+        this.changeCurrentSong(this.currentPlayList[i]);
+      }
+    },
+  },
   methods: {
     // 通过 SongListItem传给Home再传到这里获得数据
     changeCurrentSong: function (song) {
       this.currentSong = song;
+      this.showhight = true;
     },
     changeCurrentPlayList: function (list) {
       this.currentPlayList = list;
+    },
+    changeCurrentAddSong: function (v) {
+      this.currentPlayList.push(v);
+      // this.currentPlayList = [...new Set([...this.currentPlayList])];
     },
     togglePlayingState: function () {
       if (this.playing) {
@@ -104,24 +148,39 @@ export default {
       this.duration = event.target.duration;
     },
     lastSong: function () {
-      // console.log("上一首");
-      var index = this.currentPlayList.findIndex((item) => {
-        return item.id === this.currentSong.id;
-      });
-      index--;
-      index = index >= this.currentPlayList.lenght - 1 ? 0 : index;
-      index = index <= 0 ? this.currentPlayList.lenght - 1 : index;
-      this.changeCurrentSong(this.currentPlayList[index]);
+      
+      if (this.playBack) {
+        var num = this.currentPlayList.length;
+        var i = this.getRandomInt(0, num);
+        this.changeCurrentSong(this.currentPlayList[i]);
+      } else {// console.log("上一首");
+        var index = this.currentPlayList.findIndex((item) => {
+          return item.id === this.currentSong.id;
+        });
+        index--;
+        index = index >= this.currentPlayList.length - 1 ? 0 : index;
+        index = index <= 0 ? 0 : index;
+        this.changeCurrentSong(this.currentPlayList[index]);
+      }
     },
     nextSong: function () {
-      // console.log("下一首");
-      var index = this.currentPlayList.findIndex((item) => {
-        return item.id === this.currentSong.id;
-      });
-      index++;
-      index = index >= this.currentPlayList.lenght - 1 ? 0 : index;
-      index = index <= 0 ? this.currentPlayList.lenght - 1 : index;
-      this.changeCurrentSong(this.currentPlayList[index]);
+      
+      if (this.playBack) {
+        var num = this.currentPlayList.length;
+        var i = this.getRandomInt(0, num);
+        this.changeCurrentSong(this.currentPlayList[i]);
+      } else {// console.log("下一首");
+        var index = this.currentPlayList.findIndex((item) => {
+          return item.id === this.currentSong.id;
+        });
+        index++;
+        index = index >= this.currentPlayList.length - 1 ? 0 : index;
+        index = index <= 0 ? 0 : index;
+        this.changeCurrentSong(this.currentPlayList[index]);
+      }
+    },
+    getRandomInt: function (min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
     },
   },
 };
@@ -129,7 +188,7 @@ export default {
 
 <style lang="less">
 .animate__animated {
-  animation-direction: 0.1s;
+  animation-direction: 0.01s;
 }
 @keyframes rotate {
   from {
@@ -146,15 +205,26 @@ export default {
   // text-align: center;
   color: #2c3e50;
   // audio {
-    // height: 40px;
-    // margin-bottom: 80px;
+  // height: 40px;
+  // margin-bottom: 80px;
   // }
+  .headicon {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+  }
 }
 
 #nav {
   // padding: 30px;
+  width: 100vw;
   display: flex;
   box-shadow: 0 -1px 1px 0px rgb(231, 231, 231) inset;
+  position: fixed;
+  top: 84px;
+  z-index: 5;
+  background-color: white;
   li {
     flex: 1;
     text-align: center;
@@ -177,7 +247,13 @@ export default {
   position: relative;
   top: 0;
   left: 0;
-  height: calc(100vh - 42px);
-  overflow: hidden;
+  // height: calc(100vh - 42px);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.homehight {
+  // height: calc(100% -200px);
+  padding-bottom: 30px;
 }
 </style>

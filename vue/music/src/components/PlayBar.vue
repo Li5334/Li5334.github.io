@@ -13,29 +13,33 @@
     <img
       v-if="currentSong.album"
       :src="`${
-        currentSong.song ? currentSong.picUrl : currentSong.album.artist.img1v1Url
+        currentSong.song
+          ? currentSong.picUrl
+          : currentSong.album.artist.img1v1Url
       }?imageView=1&type=webp&thumbnail=80x0`"
     />
-    <h3>
-      {{ currentSong.name }} -
-      <span v-if="!currentSong.album">{{
+    <div class="textname">
+      <!-- <span>{{ currentSong.name }}</span>  -->
+      <span v-if="!currentSong.album">{{ currentSong.name }} - {{
         currentSong.song
           ? currentSong.song.artists[0].name
           : currentSong.ar[0].name
       }}</span>
-      <span v-if="currentSong.album">{{
+      <span v-if="currentSong.album">{{ currentSong.name }} - {{
         currentSong.song
           ? currentSong.song.artists[0].name
           : currentSong.artists[0].name
       }}</span>
-    </h3>
+    </div>
+    <div class="addi" @click.stop="$emit('last-song')"><i class="fa fa-step-backward"></i></div>
     <div class="progress" @click.stop="$emit('toggle-playing-state')">
       <canvas width="40" height="40" ref="canvas"></canvas>
       <div class="icon" :class="[playing ? 'pause' : 'play']"></div>
     </div>
+    <div class="addi" @click.stop="$emit('next-song')"><i class="fa fa-step-forward"></i></div>
     <!-- <button>列表</button> -->
     <div class="tubiao" @click.stop="$emit('toggle-show-play-list', true)">
-      <svg
+      <!-- <svg
         t="1629944316231"
         class="icon"
         viewBox="0 0 1024 1024"
@@ -49,7 +53,8 @@
           d="M887.210667 149.845333a24.746667 24.746667 0 0 1 30.122666 24.021334v110.08a24.789333 24.789333 0 0 1-20.138666 24.192l-161.877334 32.298666a24.405333 24.405333 0 0 0-19.797333 23.68v392.405334h-0.512a117.76 117.76 0 0 1-92.202667 108.8l-32.170666 7.253333c-50.218667 11.434667-98.261333-25.984-97.92-76.629333 0.170667-37.12 29.269333-68.053333 66.133333-76.501334l61.226667-14.08c24.362667-5.632 41.472-26.837333 41.472-51.2V219.946667c0-14.592 10.496-27.008 25.045333-29.994667zM376.917333 702.890667v76.373333H106.666667v-76.373333h270.208z m231.594667-171.818667v76.373333H106.666667v-76.373333h501.845333z m0-171.776v76.373333H106.666667V359.253333h501.845333z m0-171.776v76.373333H106.666667v-76.373333h501.845333z"
           p-id="13559"
         ></path>
-      </svg>
+      </svg> -->
+      <i class="fa fa-reorder"></i>
     </div>
   </section>
 </template>
@@ -84,7 +89,7 @@ export default {
         (Math.PI / 180) * (0 - 90),
         (Math.PI / 180) * (360 * n - 90)
       );
-      context.strokeStyle = "#d43c33";
+      context.strokeStyle = "rgb(84, 217, 221)";
       context.lineWidth = 2;
       context.stroke();
 
@@ -119,8 +124,8 @@ export default {
 .playbar {
   width: 100%;
   height: 50px;
-  // background-color: white;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background-color: rgb(235, 235, 235);
+  // background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -137,24 +142,28 @@ export default {
     animation: rotate 8s linear infinite;
     animation-play-state: paused;
   }
-  h3 {
+  .textname {
     flex: 1;
     padding: 0 10px;
+    line-height: 24px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     span {
-      color: rgb(151, 151, 151);
-      font-size: 10px;
+      font-size: 18px;
+      color: rgb(97, 97, 97);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
     }
   }
   .progress {
     width: 30px;
     height: 30px;
     position: relative;
-    top: 13px;
+    top: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,6 +204,18 @@ export default {
   .tubiao {
     margin-left: 10px;
     line-height: 10px;
+    color: rgb(97, 97, 97);
+    i {
+      font-size: 20px;
+    }
+    
+  }
+  .addi {
+    margin: 0 10px;
+    color: rgb(97, 97, 97);
+    i {
+      font-size: 20px;
+    }
   }
 }
 &.playing {

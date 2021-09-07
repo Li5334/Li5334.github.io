@@ -4,7 +4,6 @@
     class="listitem"
     @click="$emit('change-current-song', item)"
   >
-    <div class="nam"><slot></slot></div>
     <div class="left">
       <div class="songmusic">
         {{ item.name }}
@@ -32,7 +31,7 @@
     class="listitem"
     @click="$emit('change-current-song', item)"
   >
-    <div class="nam"><slot></slot></div>
+    <!-- <div class="nam"><slot></slot></div> -->
     <div class="left">
       <div class="songmusic">
         {{ item.name }}
@@ -52,37 +51,11 @@
       </div>
     </div>
   </li>
-  <li
-    v-else-if="item.artists"
-    class="listitem"
-    @click="$emit('change-current-song', item)"
-  >
-  <!-- <i v-if="addSong" class="fa fa-plus-square" @click.stop="$emit('change-current-add-song', item)"></i> -->
-    <div class="nam" @click.stop="$emit('change-current-add-song', item)"><slot></slot></div>
-    <div class="left">
-      <div class="songmusic">
-        {{ item.name }}
-        <span v-for="n in item.alias" :key="n">{{ n }}</span>
-      </div>
-      <div class="songname">
-        <em v-if="item.no == 0 || item.no == 1"></em>
-        <i class="artist" v-for="artist in item.artists" :key="artist.id">{{
-          artist.name
-        }}</i>
-        <span>{{ item.album.name }}</span>
-      </div>
-    </div>
-    <div class="right-icon">
-      <div class="play" :class="{ current: currentSongId === item.id, playing:playing }">
-        <i></i><i></i><i></i>
-      </div>
-    </div>
-  </li>
 </template>
 
 <script>
 export default {
-  props: {
+props: {
     item: {
       type: Object,
       required: true,
@@ -92,32 +65,16 @@ export default {
     },
     playing:Boolean,
   },
-};
+}
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .listitem {
   display: flex;
   margin-left: 12px;
   padding: 5px 10px 5px 0;
   border-bottom: 1px solid rgb(241, 241, 241);
   align-items: center;
-  .nam {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    // padding-right: 12px;
-    font-size: 17px;
-    color: #999;
-  }
-  &.lt3 {
-    .nam {
-      color: #d43c33;
-      i {
-        color: white;
-      }
-    }
-  }
   .left {
     flex: 1;
     .songmusic {
