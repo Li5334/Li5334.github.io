@@ -1,0 +1,6 @@
+/* components/recommend-section/recommend-section.wxss */
+
+.title {
+  padding-left: 22rpx;
+  border-left: 8rpx solid red;
+}

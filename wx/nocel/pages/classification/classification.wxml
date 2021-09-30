@@ -1,0 +1,94 @@
+<!--pages/classification/classification.wxml-->
+<!-- <text>pages/classification/classification.wxml</text> -->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<view class="classify">
+
+  <view class="classify-left">
+    <view class="cl-title">
+      <view class="male {{extraClasses2?'bacolor':''}}" data-gender="male" bindtap="changeGender">
+        <view>男生</view>
+      </view>
+      <view class="female {{!extraClasses2?'bacolor':''}}" data-gender="female" bindtap="changeGender">
+        <view>女生</view>
+      </view>
+    </view>
+    <view class="tran-box">
+      <view class="box {{extraClasses}}"></view>
+    </view>
+  </view>
+
+  <view class="classify-right">
+
+    <view class="maxbox {{extraClasses3}}">
+      <block wx:if="{{gender === 'male'}}">
+        <view class="man">
+          <view class="xian"></view>
+          <view class="txt"><text>※</text> 男生 <text>※</text></view>
+          <view class="xian"></view>
+        </view>
+        <view class="showbooks">
+          <view class="cl-books" wx:for="{{fication.male}}" wx:key="index" data-name="{{item.name}}" data-gender="male"
+            bindtap="newfication">
+            <view class="cl-word">
+              <view class="cl-da">{{item.name}}</view>
+              <view class="cl-xiao">{{item.bookCount}}本</view>
+            </view>
+            <view class="cl-img">
+              <view class="img-one">
+                <van-image lazy-load class="thumb" width="80rpx" height="90rpx"
+                  src="{{tools.parseImageUrl(item.bookCover[0])}}" use-error-slot>
+                  <text slot="error"></text>
+                </van-image>
+              </view>
+              <view class="img-two">
+                <van-image lazy-load class="thumb" width="80rpx" height="100rpx" use-error-slot
+                  src="{{tools.parseImageUrl(item.bookCover[1])}}">
+                  <text slot="error"></text>
+                </van-image>
+              </view>
+              <view class="img-three">
+                <van-image lazy-load class="thumb" width="80rpx" height="80rpx"
+                  src="{{tools.parseImageUrl(item.bookCover[2])}}" use-error-slot>
+                  <text slot="error"></text>
+                </van-image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <block wx:if="{{gender === 'female'}}">
+        <view class="girl">
+          <view class="xian"></view>
+          <view class="txt"><text>※</text> 女生 <text>※</text></view>
+          <view class="xian"></view>
+        </view>
+        <view class="showbooks2" id="sss">
+          <view class="cl-books" wx:for="{{fication.female}}" wx:key="index" data-name="{{item.name}}"
+            data-gender="female" bindtap="newfication">
+            <view class="cl-word">
+              <view class="cl-da">{{item.name}}</view>
+              <view class="cl-xiao">{{item.bookCount}}本</view>
+            </view>
+            <view class="cl-img">
+              <view class="img-one">
+                <van-image lazy-load class="thumb" width="80rpx" height="90rpx"
+                  src="{{tools.parseImageUrl(item.bookCover[0])}}" />
+              </view>
+              <view class="img-two">
+                <van-image lazy-load class="thumb" width="80rpx" height="100rpx"
+                  src="{{tools.parseImageUrl(item.bookCover[1])}}" />
+              </view>
+              <view class="img-three">
+                <van-image lazy-load class="thumb" width="80rpx" height="80rpx"
+                  src="{{tools.parseImageUrl(item.bookCover[2])}}" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+</view>

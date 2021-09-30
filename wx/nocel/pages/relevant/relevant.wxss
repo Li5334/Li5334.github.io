@@ -1,0 +1,11 @@
+/* pages/relevant/relevant.wxss */
+.keyword {
+  padding-top: 150rpx;
+}
+
+.seetxt {
+  padding: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgb(83, 83, 83);
+}

@@ -1,0 +1,31 @@
+/* components/top-bar/top-bar.wxss */
+.nav-bar {
+  width: 750rpx;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.nav-bar .van-nav-bar {
+  background: #FFFFFF;
+}
+
+.van-nav-bar__text {
+  color: black;
+}
+
+.van-icon-arrow-left::before {
+  color: black;
+}
+
+.title {
+  width: 360rpx;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sss {
+  color: rgb(238, 234, 234);
+}

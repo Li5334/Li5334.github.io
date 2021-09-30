@@ -1,0 +1,65 @@
+.recom {
+  width: 750rpx;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  padding-top: 20rpx;
+  z-index: 5;
+}
+.recom .recom-title {
+  width: 750rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.recom .boxbig {
+  width: 750rpx;
+  border-bottom: 1rpx solid gainsboro;
+  background-color: white;
+}
+.recom .boxbig .box {
+  width: 100rpx;
+  height: 10rpx;
+  margin: 10rpx 0rpx 0rpx 140rpx;
+  background: #2fa7cf;
+  border-radius: 5rpx;
+}
+.recom .boxbig .box-transition {
+  transition: all 0.5s;
+}
+.recom .boxbig .box-moved {
+  margin-left: 515rpx;
+}
+.ranking {
+  margin-top: 90rpx;
+}
+.ranking .rank-content {
+  display: flex;
+}
+.ranking .rank-content .rank-left {
+  width: 170rpx;
+  box-sizing: border-box;
+  border-right: 2rpx solid gainsboro;
+}
+.ranking .rank-content .rank-left .leftpo {
+  position: fixed;
+  left: 8rpx;
+}
+.ranking .rank-content .rank-left .leftpo .soc {
+  overflow-y: scroll;
+}
+.ranking .rank-content .rank-left .leftpo .soc .leftbox {
+  width: 120rpx;
+  text-align: center;
+  margin: 10rpx 20rpx;
+  padding-bottom: 10rpx;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid gainsboro;
+  overflow-y: scroll;
+}
+.ranking .rank-content .rank-right {
+  width: 580rpx;
+}
+.ri-red {
+  color: red;
+  border-bottom: 2rpx solid red !important;
+}

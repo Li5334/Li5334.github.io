@@ -1,0 +1,49 @@
+<!--pages/text/text.wxml-->
+<mycomponent prop-a="{{msg}}" prop-b="{{arr}}" bind:myMethods="onmyMethods">
+  <view>mycomponent组件</view>
+</mycomponent>
+
+
+<text>pages/text/text.wxml</text>
+<view>xinhan</view>
+<view class="msg">{{msg}}</view>
+<button bindtap="bindmethods">按钮</button>
+<!-- 点击事件名不同与以前名 -->
+<button type="warn" plain="true" bindtap="boolch">按钮2</button>
+<!-- if判断动态获取数据要用{{}} -->
+<text wx:if="{{bool}}">true</text>
+<text wx:else>false</text>
+
+<!-- 使用wx:for 默认每一项为item，索引为index -->
+<view wx:for="{{arr}}" wx:key="index">{{index}}-{{item}}</view>
+<!-- <view><input type="text"></view> -->
+
+<view>{{value}}</view>
+
+<!-- <view><map name="" longitude=110 latitude=110></map></view> -->
+<swiper indicator-dots="true" autoplay="true">
+  <swiper-item wx:for="{{obj}}" wx:key="index">
+    <!-- <view class="swiper-item">{{item}}</view> -->
+    <image style="width: 100%; background-color: #eeeeee;" mode="widthFix" src="{{item.url}}"></image>
+  </swiper-item>
+</swiper>
+
+<map longitude='{{longitude}}' latitude='{{latitude}}'></map>
+<button type="warn" bindtap="getLocal">获取位置</button>
+
+<!-- 声明式 -->
+<navigator url="/pages/title/title?name=nake" open-type="navigate">跳转到title页面</navigator>
+<!-- 编程式 -->
+<button type="warn" bindtap="btnnav">跳转到title页面</button>
+
+<wxs module="m1">
+  var msg = "hello world";
+
+  module.exports.message = msg;
+</wxs>
+
+<view> {{m1.message}} </view>
+
+<wxs src="../../utils/tools.wxs" module="tools" />
+<view> {{tools.foo}} </view>
+<view> {{tools.bar(123)}} </view>

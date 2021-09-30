@@ -1,0 +1,8 @@
+<!--components/recommend-section/recommend-section.wxml-->
+<!-- <text>components/recommend-section/recommend-section.wxml</text>
+ -->
+<wxs src="../../utils/tools.wxs" module="tools"></wxs>
+<view class="title">{{tools.strsubstr(item.title,0,5)}}</view>
+<view class="list">
+  <book-item wx:for="{{tools.slice(item.books,0,5)}}" wx:for-item="book" wx:key="index" book="{{book}}"></book-item>
+</view>

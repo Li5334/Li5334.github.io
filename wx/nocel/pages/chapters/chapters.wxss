@@ -1,0 +1,164 @@
+page {
+  background-color: #f1eee9;
+}
+.pages {
+  background-color: #f1eee9 !important;
+}
+.pageblack {
+  color: gainsboro;
+  border-bottom: #1b1b1b !important;
+  background-color: #1b1b1b !important;
+}
+.pagegreen {
+  border-bottom: #b9e5bf !important;
+  background-color: #b9e5bf !important;
+}
+.psf {
+  padding-left: 4rpx;
+  margin-bottom: 20rpx;
+}
+.richs {
+  padding: 0 20rpx;
+  padding-top: 160rpx;
+}
+.richs .ri-kon {
+  padding: 40rpx 0;
+}
+.richs .ri-kon .ri-xia {
+  width: 710rpx;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+  text-align: center;
+  border: 2rpx solid gainsboro;
+  border-radius: 40rpx;
+}
+.richs .ri-kon .ri-qita {
+  display: flex;
+  justify-content: space-between;
+}
+.richs .ri-kon .ri-qita view {
+  width: 330rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  border: 2rpx solid gainsboro;
+  border-radius: 40rpx;
+}
+.richs2 {
+  height: 100vh;
+}
+.mask {
+  width: 700rpx;
+  height: 80vh;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 25rpx;
+}
+.pofiexd {
+  width: 750rpx;
+  height: 300rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: rgba(0, 0, 0, 0.952);
+  position: fixed;
+  bottom: -300rpx;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pofiexd .poflex {
+  display: flex;
+  justify-content: space-between;
+}
+.pofiexd .poflex view {
+  width: 200rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 2rpx solid #686565;
+  border-radius: 10rpx;
+}
+.pofiexd .poflex .rgbblack {
+  background-color: black;
+}
+.pofiexd .poflex .rgbgreen {
+  color: #1b1b1b;
+  background-color: #b9e5bf;
+}
+.po-tran {
+  transition: all 0.5s;
+}
+.po-bottom {
+  bottom: 0;
+}
+.chapters-box {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 10rpx 30rpx;
+  padding-top: 160rpx;
+  position: relative;
+  z-index: 5;
+}
+.chapters-box .ch-box {
+  width: 690rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid floralwhite;
+  background-color: #f1eee9;
+  position: fixed;
+  top: 130rpx;
+  z-index: 6;
+}
+.chapters-box .ch-box .ch-mulu {
+  font-size: 40rpx;
+}
+.chapters-box .ch-box .ch-zf {
+  font-size: 36rpx;
+}
+.chapters-box .ch-ul {
+  padding-top: 100rpx;
+  padding-bottom: 100rpx;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+}
+.chapters-box .ch-ul .ch-list {
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #e0dede;
+  display: flex;
+  justify-content: space-between;
+}
+.chapters-box .ch-ul .ch-list text:nth-of-type(1) {
+  width: 94rpx;
+}
+.chapters-box .ch-ul .ch-list text:nth-of-type(2) {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.chapters-box .ch-ul .ch-list text:nth-of-type(3) {
+  width: 30rpx;
+}
+.chapters-box .ch-ul .colorgren {
+  color: #979797;
+}
+.chapters-box .ch-off {
+  width: 690rpx;
+  padding: 30rpx 0;
+  font-size: 32rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  background-color: #f1eee9;
+}
+.colorred {
+  color: red;
+}

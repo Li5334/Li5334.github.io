@@ -1,0 +1,11 @@
+<!--components/top-bar/top-bar.wxml-->
+<view class="nav-bar">
+  <van-nav-bar
+    custom-style="{{topstyle == 1?'background-color: #f1eee9;':''}} {{topstyle ==2?'background-color: #1b1b1b;color: rgb(238, 234, 234) !important;':''}} {{topstyle == 3?'background-color: #b9e5bf;':''}}"
+    safe-area-inset-top="{{true}}" left-arrow left-text="" bind:click-left="onClickLeft">
+
+    <view class="title {{topstyle == 2 ? 'sss':''}}" slot="title">
+      <slot></slot>
+    </view>
+  </van-nav-bar>
+</view>

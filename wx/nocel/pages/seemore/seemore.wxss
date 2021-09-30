@@ -1,0 +1,7 @@
+/* pages/seemore/seemore.wxss */
+.seetxt {
+  padding: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgb(83, 83, 83);
+}

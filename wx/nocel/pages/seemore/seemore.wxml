@@ -1,0 +1,5 @@
+<!--pages/seemore/seemore.wxml-->
+<!-- <text>pages/seemore/seemore.wxml</text> -->
+<book-item wx:for="{{more.books}}" wx:for-item="book" wx:key="index" book="{{book}}"></book-item>
+
+<view class="seetxt">没有更多书籍</view>

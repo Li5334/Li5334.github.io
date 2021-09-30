@@ -1,0 +1,42 @@
+/* components/book-item/book-item.wxss */
+.card2 {
+  display: flex;
+  padding: 30rpx;
+}
+.card2 .thumb {
+  width: 120rpx;
+  height: 180rpx;
+  box-shadow: 0rpx 2rpx 10rpx 2rpx rgba(0, 0, 0, 0.5);
+}
+.card2 .right {
+  width: 540rpx;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #f1eeee;
+}
+.card2 .right .title {
+  font-size: 34rpx;
+  line-height: 30rpx;
+}
+.card2 .right .desc {
+  margin: 20rpx 0rpx;
+  height: 90rpx;
+  line-height: 44rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: grey;
+}
+.card2 .right .info {
+  line-height: 30rpx;
+  display: flex;
+  font-size: 24rpx;
+  justify-content: space-between;
+}
+.card2 .right .info .box .cate {
+  color: grey;
+}
+.overf {
+  width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,21 @@
+<!--pages/newfication/newfication.wxml-->
+<!-- <text>pages/newfication/newfication.wxml</text> -->
+<top-bar>{{propid}}</top-bar>
+
+<view class="oneheader">
+  <view class="bot">
+    <view wx:for="{{filter}}" data-ftext="{{item}}" wx:key="index" bindtap="filtertext" class="shufl {{currenF.text === item.text?'cored':''}}">{{item.text}}</view>
+  </view>
+</view>
+
+<view class="twoheader">
+  <view class="bot">
+    <scroll-view scroll-x="{{true}}">
+      <view wx:for="{{subs}}" data-stext="{{item}}" wx:key="index" class="shufl  {{currenS === item?'cored':''}}" bindtap="substext">{{item}}</view>
+    </scroll-view>
+  </view>
+</view>
+
+<book-item wx:for="{{newfibooks}}" wx:key="index" book="{{item}}"></book-item>
+
+<van-divider wx:if="{{gebool}}" contentPosition="center">没有更多了</van-divider>

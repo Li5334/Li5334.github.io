@@ -1,0 +1,1 @@
+<view><view class="title">{{msg}}</view><button type="default" data-event-opts="{{[['tap',[['clickMethods',['$event']]]]]}}" bindtap="__e">点击</button><view>{{bool}}</view><block wx:for="{{arr}}" wx:for-item="item" wx:for-index="index"><view class="arr">{{item}}</view></block><navigator url="../about/about"><button type="default">about</button></navigator></view>

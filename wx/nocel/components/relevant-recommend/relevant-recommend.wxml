@@ -1,0 +1,12 @@
+<!--components/relevant-recommend/relevant-recommend.wxml-->
+<!-- <text>components/relevant-recommend/relevant-recommend.wxml</text> -->
+<wxs src="../../utils/tools.wxs" module="tools" />
+<view class="re-pad">
+  <view class="relevant">
+    <view class="re-box" wx:for="{{relevants}}" wx:key="index" data-id="{{item._id}}" bindtap="navtodetail">
+      <van-image lazy-load class="thumb" width="200rpx" height="270rpx" src="{{tools.parseImageUrl(item.cover)}}" />
+      <view class="re-title">{{item.title}}</view>
+      <text class="re-author">{{item.author}}</text>
+    </view>
+  </view>
+</view>

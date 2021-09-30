@@ -1,0 +1,77 @@
+var slice = function (arr,start,end) {
+  if(arr){
+    return arr.slice(start,end)
+  }else {
+    return null
+  }
+  
+}
+
+
+var parseImageUrl = function (n) {
+  if (n) {
+    return decodeURIComponent(n.replace("/agent/", ""))
+  } else {
+    return ''
+  }
+}
+
+var parseCount = function(value) {
+  if (value > 100000000) {
+    return (value / 100000000).toFixed(1) + "亿";
+  } else if (value > 10000) {
+    return (value / 10000).toFixed(1) + "万";
+  } else {
+    return value;
+  }
+}
+
+var deltrim = function (val){
+  return val.trim()
+}
+
+var getFloat = function(num, n) {
+	n = n ? parseInt(n) : 0;
+	if(n <= 0) {
+		return Math.round(num);
+	}
+	num = Math.round(num * Math.pow(10, n)) / Math.pow(10, n); //四舍五入
+	num = Number(num).toFixed(n); //补足位数
+	return num;
+}
+
+var strsubstr = function(vua,start,end){
+  if(vua){
+    return vua.substring(start,end);
+  }else {
+    return null 
+  }
+}
+
+var strreplace = function(v) {
+  if(v) {
+    return v.replace("VIP卷 ",'')
+  }else {
+    return null
+  }
+  
+}
+
+// var konge = function (k){
+//   if(k){
+//     return k.replace("/\s+/g","")
+//   }else {
+//     return null
+//   }
+// }
+
+module.exports = {
+  slice:slice,
+  parseImageUrl:parseImageUrl,
+  parseCount:parseCount,
+  deltrim:deltrim,
+  getFloat:getFloat,
+  strsubstr:strsubstr,
+  strreplace:strreplace
+  // konge:konge
+}

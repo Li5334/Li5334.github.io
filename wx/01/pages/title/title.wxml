@@ -1,0 +1,24 @@
+<!--pages/title/title.wxml-->
+<text>pages/title/title.wxml</text>
+
+<view class="how">
+  <view class="left">left</view>
+  <view class="right">right</view>
+</view>
+
+<view class="how2">
+  <view class="left2"></view>
+  <view class="right2">right</view>
+</view>
+
+<view class="how3">
+  <view class="left3">left</view>
+  <view class="right3">right</view>
+</view>
+
+<view class="how4">
+  <view class="left4">left</view>
+  <view class="right4">right</view>
+</view>
+
+<navigator url="/pages/text/text" open-type="navigate">跳转到text页面</navigator>

@@ -1,0 +1,26 @@
+/* pages/bookshelf/bookshelf.wxss */
+/* .shelf {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shelf .shelf-flex .shelf-title {
+  width: 220rpx;
+}
+.shelf .shelf-flex .shelf-author {
+  font-size: 26rpx;
+  color: rgb(120, 121, 122);
+} */
+
+.del {
+  width: 152rpx;
+  height: 212rpx;
+  text-align: center;
+  line-height: 212rpx;
+  color: white;
+  background-color: rgb(238,10,36);
+}

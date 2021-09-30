@@ -1,0 +1,72 @@
+/* pages/title/title.wxss */
+.how {
+  background-color: bisque;
+}
+
+.how .left {
+  width: 75px;
+  background-color: brown;
+  display: inline-block;
+}
+
+.how .right {
+  width: 300px;
+  background-color: cadetblue;
+  display: inline-block;
+}
+
+.how2 {
+  margin-top: 10px;
+  background-color: rgb(238, 136, 11);
+  overflow: hidden;
+}
+
+.how2 .left2 {
+  width: 25%;
+  padding-top: 25%;
+  background-color: rgb(218, 25, 25);
+  float: left;
+}
+
+.how2 .right2 {
+  width: 75%;
+  background-color: rgb(40, 212, 218);
+  float: left;
+}
+
+.how3 {
+  margin-top: 10px;
+  background-color: rgb(238, 136, 11);
+  /* overflow: hidden; */
+  display: flex;
+}
+
+.how3 .left3 {
+  width: 25vw;
+  height: 25vw;
+  background-color: rgb(218, 25, 25);
+}
+
+.how3 .right3 {
+  flex: 1;
+  background-color: rgb(40, 212, 218);
+}
+
+.how4 {
+  margin-top: 10px;
+  background-color: rgb(238, 136, 11);
+  overflow: hidden;
+}
+
+.how4 .left4 {
+  width: 250rpx;
+  height: 250rpx;
+  background-color: rgb(218, 25, 25);
+  float: left;
+}
+
+.how4 .right4 {
+  width: 500rpx;
+  background-color: rgb(40, 212, 218);
+  float: left;
+}

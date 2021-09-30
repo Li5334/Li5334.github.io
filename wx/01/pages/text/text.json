@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mycomponent":"/component/mycomponent"
+  },
+  "backgroundColor":"#f00"
+}

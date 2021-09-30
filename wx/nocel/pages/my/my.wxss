@@ -1,0 +1,40 @@
+.mypage {
+  padding: 0rpx 30rpx;
+}
+.mypage .itx {
+  display: flex;
+}
+.mypage .itx .userimg {
+  overflow: hidden;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.mypage .itx .username {
+  padding-left: 20rpx;
+  padding-top: 6rpx;
+  flex: 1;
+}
+.mypage .itx .username .ids {
+  font-size: 26rpx;
+  color: #8d8d8d;
+}
+.mypage .list {
+  padding: 30rpx 0rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36rpx;
+  border-bottom: 2rpx solid #f7f1f1;
+}
+.mypage .list .itemicon {
+  color: #1296db;
+  font-size: 48rpx;
+}
+.mypage .list .itemtext {
+  flex: 1;
+  padding-left: 30rpx;
+}
+.mypage .list .righticon {
+  color: #a7a6a6;
+}

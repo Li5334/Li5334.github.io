@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "top-bar":"/components/top-bar/top-bar",
+    "book-item":"/components/book-item/book-item",
+    "van-divider": "@vant/weapp/divider/index"
+  },
+  "navigationStyle":"custom"
+}

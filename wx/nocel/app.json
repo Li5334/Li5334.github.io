@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/recommend/recommend",
+    "pages/bookshelf/bookshelf",
+    "pages/classification/classification",
+    "pages/rankinglist/rankinglist",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/details/details",
+    "pages/seemore/seemore",
+    "pages/search/search",
+    "pages/relevant/relevant",
+    "pages/chapters/chapters",
+    "pages/newfication/newfication"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "推荐",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#AAAAAA",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐",
+        "iconPath": "/image/recommend3.png",
+        "selectedIconPath": "/image/recommend4.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "/image/classification (3).png",
+        "selectedIconPath": "/image/classification (4).png"
+      },
+      {
+        "pagePath": "pages/rankinglist/rankinglist",
+        "text": "排行榜",
+        "iconPath": "/image/rankinglist.png",
+        "selectedIconPath": "/image/rankinglist (1).png"
+      },
+      {
+        "pagePath": "pages/bookshelf/bookshelf",
+        "text": "书架",
+        "iconPath": "/image/bookshelf.png",
+        "selectedIconPath": "/image/bookshelf2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/image/my (6).png",
+        "selectedIconPath": "/image/my (5).png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-transition": "@vant/weapp/transition/index"
+  }
+}

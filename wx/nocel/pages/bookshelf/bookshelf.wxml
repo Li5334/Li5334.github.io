@@ -1,0 +1,19 @@
+<!--pages/bookshelf/bookshelf.wxml-->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<!-- <view class="shelf">
+  <view wx:for="{{bookshelf}}" wx:key="index" class="shelf-flex"  data-id="{{item._id}}" bindtap="navtodetail">
+    <van-image lazy-load class="thumb" width="220rpx" height="280rpx" src="{{tools.parseImageUrl(item.cover)}}" />
+    <view class="shelf-title">{{item.title}}</view>
+    <view class="shelf-author">{{item.author}}</view>
+  </view>
+</view> -->
+
+<van-swipe-cell wx:for="{{bookshelf}}" wx:key="index" right-width="{{ 65 }}" bind:click="click" data-bid="{{item._id}}">
+  <van-cell-group>
+    <book2-item book="{{item}}"></book2-item>
+  </van-cell-group>
+  <view slot="right" class="del">删除</view>
+</van-swipe-cell>
+
+<!-- <book2-item wx:for="{{bookshelf}}" wx:for-item="book" wx:key="index" book="{{book}}"></book2-item> -->

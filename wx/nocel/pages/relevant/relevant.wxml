@@ -1,0 +1,9 @@
+<!--pages/relevant/relevant.wxml-->
+<!-- <text>pages/relevant/relevant.wxml</text> -->
+<top-bar>跟"{{topname}}"相关的书籍</top-bar>
+<view class="keyword" wx:if="{{keyword.books.length}}">
+  <book-item wx:for="{{keyword.books}}" wx:for-item="book" wx:key="index" book="{{book}}">
+    </book-item>
+</view>
+
+<view class="seetxt">没有更多书籍</view>

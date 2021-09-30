@@ -1,0 +1,20 @@
+<!--components/book2-item/book2-item.wxml-->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<view class="card2" data-id="{{book._id}}" bindtap="navtodetail">
+
+  <van-image lazy-load class="thumb" width="120rpx" height="180rpx" src="{{tools.parseImageUrl(book.cover)}}" />
+
+  <view class="right">
+    <view class="title {{rankingbool?'overf':''}}">{{book.title}}</view>
+    <view class="desc">更新到：{{tools.strreplace(book.lastChapter)}}</view>
+    <view class="info">
+      <view class="box">
+        <block wx:if="{{book.author}}">
+          <text class="cate">{{book.author}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</view>

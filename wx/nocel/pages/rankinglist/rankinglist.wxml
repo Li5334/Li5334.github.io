@@ -1,0 +1,29 @@
+<!--pages/rankinglist/rankinglist.wxml-->
+<!-- <text>pages/rankinglist/rankinglist.wxml</text> -->
+<view class="recom">
+  <view class="recom-title">
+    <view data-gender="male" bindtap="changeGender">男频</view>
+    <view data-gender="female" bindtap="changeGender">女频</view>
+  </view>
+  <view class="boxbig">
+    <view class="box {{extraClasses}}"></view>
+  </view>
+</view>
+
+<view class="ranking">
+  <view class="rank-content">
+    <view class="rank-left">
+      <view class="leftpo">
+        <view class="soc">
+          <view wx:for="{{rankinglist[gender]}}" wx:key="_id" class="leftbox {{rankid == item._id?'ri-red':''}}"
+            data-id="{{item._id}}" bindtap="anranking">
+            {{item.shortTitle}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="rank-right">
+      <book-item wx:for="{{rankingbooks}}" wx:for-item="book" wx:key="index" book="{{book}}"
+        rankingbool="{{rankingbool}}"></book-item>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!--components/book-item/book-item.wxml-->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<view class="card" data-id="{{book._id}}" bindtap="navtodetail">
+
+  <van-image lazy-load class="thumb" width="120rpx" height="180rpx" src="{{tools.parseImageUrl(book.cover)}}" />
+
+  <view class="right">
+    <view class="title {{rankingbool?'overf':''}}">{{book.title}}</view>
+    <view class="desc">{{booksjj}}</view>
+    <view class="info">
+      <view class="box">
+        <!-- <block wx:if="{{book.minorCate}}">
+          <text class="cate">{{book.minorCate}}</text>
+        </block> -->
+        <block wx:if="{{book.author}}">
+          <text class="cate">{{book.author}}</text>
+        </block>
+        <text wx:if="{{!rankingbool}}"> | </text>
+        <text class="renqi" wx:if="{{!rankingbool}}">{{book.retentionRatio}}万人气</text>
+      </view>
+      <view class="tag">{{book.majorCate}}</view>
+    </view>
+  </view>
+
+</view>

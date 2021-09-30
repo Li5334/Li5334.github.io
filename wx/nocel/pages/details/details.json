@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "comment":"/components/comment/comment",
+    "relevant-recommend":"/components/relevant-recommend/relevant-recommend",
+    "van-skeleton": "@vant/weapp/skeleton/index"
+  },
+  "navigationBarTextStyle":"black",
+  "navigationBarTitleText": "书籍详情"
+}

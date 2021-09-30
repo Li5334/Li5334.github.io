@@ -1,0 +1,21 @@
+<!--components/comment/comment.wxml-->
+<view class="comment">
+  <view class="c-title">{{item.title}}</view>
+  <view class="c-content">{{item.content}}</view>
+  <view class="c-flex">
+    <view class="c-left">
+      <view class="to"></view>
+      <view class="names">
+        <view class="son">{{item.author.nickname}}</view>
+        <view class="time">2小时前</view>
+      </view>
+    </view>
+    <view class="c-right">
+      <view class="icon">
+        <van-rate size="30rpx" 
+        gutter="4rpx" color="#ffd21e" readonly value="{{ value }}" bind:change="onChange" />
+      </view>
+      <view class="likecount">{{item.likeCount}}人觉得有用</view>
+    </view>
+  </view>
+</view>

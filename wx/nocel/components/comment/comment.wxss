@@ -1,0 +1,49 @@
+.comment {
+  padding: 30rpx;
+}
+.comment .c-title {
+  font-size: 36rpx;
+}
+.comment .c-content {
+  height: 100rpx;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+  color: #808080;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.comment .c-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment .c-flex .c-left {
+  display: flex;
+  align-items: center;
+}
+.comment .c-flex .c-left .to {
+  width: 70rpx;
+  height: 70rpx;
+  background-color: orangered;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.comment .c-flex .c-left .names .son {
+  padding-bottom: 6rpx;
+  font-size: 30rpx;
+}
+.comment .c-flex .c-left .names .time {
+  font-size: 20rpx;
+  color: #8a8a8a;
+}
+.comment .c-flex .c-right {
+  text-align: center;
+}
+.comment .c-flex .c-right .likecount {
+  margin-bottom: 10rpx;
+  font-size: 26rpx;
+  color: #8a8a8a;
+}

@@ -1,0 +1,7 @@
+/* pages/text/text.wxss */
+
+.msg {
+  width: 100px;
+  margin: 0 auto;
+  color: rgb(231, 55, 23);
+}

@@ -1,0 +1,56 @@
+/* components/book-item/book-item.wxss */
+.card {
+  display: flex;
+  padding: 30rpx;
+}
+.card .thumb {
+  width: 120rpx;
+  height: 180rpx;
+  box-shadow: 0rpx 2rpx 10rpx 2rpx rgba(0, 0, 0, 0.5);
+}
+.card .right {
+  width: 540rpx;
+  margin-left: 30rpx;
+}
+.card .right .title {
+  height: 40rpx;
+  font-size: 34rpx;
+  line-height: 30rpx;
+}
+.card .right .desc {
+  margin: 10rpx 0rpx;
+  height: 90rpx;
+  line-height: 44rpx;
+  font-size: 28rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+}
+.card .right .info {
+  line-height: 30rpx;
+  display: flex;
+  font-size: 24rpx;
+  justify-content: space-between;
+}
+.card .right .info .box .cate {
+  color: grey;
+}
+.card .right .info .box .renqi {
+  color: red;
+}
+.card .right .info .tag {
+  padding: 0rpx 10rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  color: grey;
+  background-color: #f0eeee;
+}
+.overf {
+  width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

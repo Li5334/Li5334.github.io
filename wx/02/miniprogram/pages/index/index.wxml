@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<text>pages/index/index.wxml</text>
+<button type="default" bindtap="tapHandler">点击</button>
+
+<button type="primary" bindtap="getMore">点击获取多条记录</button>
+<view wx:for="{{todos}}" wx:key="index">{{item.text}}</view>
+
+<view>
+  <input model:value="{{value}}" placeholder="获取焦点" />
+  <button type="warn" bindtap="addTodo">add</button>
+</view>

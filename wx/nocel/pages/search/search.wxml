@@ -1,0 +1,52 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<!-- 搜索框 -->
+<view class="inpbox">
+  <van-search model:value="{{ value }}" placeholder="请输入搜索关键词" shape="round"  bind:change="change"
+    bind:search="searchenter" />
+</view>
+<!-- 热门搜索 -->
+<view class="tuijian" wx:if="{{!value}}">
+  <view class="se-txt">
+    <view class="se-hot">热门推荐</view>
+    <view class="se-replay" bindtap="changereplay">换一批
+      <van-icon name="replay" />
+    </view>
+  </view>
+  <block wx:if="{{bool}}">
+    <view class="searchhot">
+      <view data-txt="{{item}}" class="se-fivebox" wx:for="{{hotbooks}}" wx:key="index" bindtap="hotsbook">{{item}}
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="searchhot">
+      <view data-txt="{{item.word}}" class="se-fivebox" wx:for="{{newbooks}}" wx:key="index" bindtap="hotsbook">
+        {{item.word}}</view>
+    </view>
+  </block>
+</view>
+
+<!-- 输入搜索内容时 出现的内容 -->
+<view wx:if="{{value}}">
+  <view class="se-book" bindtap="searchbook">
+    <view data-test="{{item.title}}" class="se-bookname" wx:for="{{searchbooks}}" wx:key="index">
+      <van-icon name="label-o" /> {{item.title}}
+    </view>
+  </view>
+</view>
+
+<!-- 搜索历史 -->
+<view class="lishi"  wx:if="{{!value}}">
+  <view class="lishi-box">
+    <view class="lishi-txt">搜索历史</view>
+    <view class="lishi-del" bindtap="delestorage">清空历史
+      <van-icon name="delete-o" />
+    </view>
+  </view>
+  <view > 
+    <view class="storageitems" wx:for="{{storageitem}}" wx:key="index" data-storageitems="{{item}}" bindtap="storseach">{{item}}</view>
+  </view>
+</view>

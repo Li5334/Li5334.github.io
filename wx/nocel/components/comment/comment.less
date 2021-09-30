@@ -1,0 +1,52 @@
+.comment {
+  padding: 30rpx;
+  .c-title {
+    font-size: 36rpx;
+  }
+  .c-content {
+    height: 100rpx;
+    padding-top: 10rpx;
+    padding-bottom: 20rpx;
+    font-size: 30rpx;
+    color: rgb(128, 128, 128);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .c-flex {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    .c-left {
+      display: flex;
+      align-items: center;
+      .to {
+        width: 70rpx;
+        height: 70rpx;
+        background-color: orangered;
+        border-radius: 50%;
+        margin-right: 10rpx;
+      }
+      .names {
+        .son {
+          padding-bottom: 6rpx;
+          font-size: 30rpx;
+        }
+        .time {
+          font-size: 20rpx;
+          color: rgb(138, 138, 138)
+        }
+      }
+    }
+    .c-right {
+      text-align: center;
+      .likecount {
+        margin-bottom: 10rpx;
+        font-size: 26rpx;
+        color: rgb(138, 138, 138)
+      }
+    }
+  }
+}

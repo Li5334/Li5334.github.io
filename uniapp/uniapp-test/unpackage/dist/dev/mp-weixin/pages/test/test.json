@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "测试页",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#ffaa7f",
+  "usingComponents": {}
+}

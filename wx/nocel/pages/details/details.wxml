@@ -1,0 +1,96 @@
+<!--pages/details/details.wxml-->
+<!-- <text>pages/details/details.wxml</text> -->
+<wxs src="../../utils/tools.wxs" module="tools" />
+<view class="details">
+  <van-image lazy-load class="leftbox" width="200rpx" height="270rpx" src="{{tools.parseImageUrl(details.cover)}}" />
+
+  <view class="rightbox">
+    <!-- 书名 -->
+    <view class="title">{{details.title}}</view>
+    <!-- 评分 -->
+    <view class="score">
+      <text class="scoreson">{{tools.getFloat(details.rating.score,1)}}</text>
+      <view class="icon">
+        <van-rate size="30rpx" gutter="4rpx" color="#ffd21e" readonly value="{{ value }}" bind:change="onChange" />
+      </view>
+      <text> | </text>
+      <text class="tip">{{details.rating.count}}人评</text>
+    </view>
+    <!-- 作者 -->
+    <view class="author">
+      <text class="authorson">{{details.author}}</text>
+      <text> | </text>
+      <text class="majorCate">{{details.majorCate}}</text>
+    </view>
+    <!-- 字数 -->
+    <view class="wordCount">
+      <text class="wordnum">{{tools.parseCount(details.wordCount)}}字</text>
+      <text> | </text>
+      <text>9小时前</text>
+    </view>
+  </view>
+</view>
+
+<view class="shuju">
+  <view>
+    <view class="too">{{details.latelyFollower}}</view>
+    <view>追书人气</view>
+  </view>
+  <view>
+    <view class="too">{{details.retentionRatio}}%</view>
+    <view>读者留存</view>
+  </view>
+  <view>
+    <view class="too">{{details.serializeWordCount}}</view>
+    <view>日更字数</view>
+  </view>
+</view>
+
+<view class="jianjie">
+  <view class="jianjiebox">
+    <view class="txt">简介</view>
+    <view class="fontsize">
+      <block wx:if="{{!show}}">
+        <van-icon name="arrow-down" bindtap="upOrdown" />
+      </block>
+      <block wx:else>
+        <van-icon name="arrow-up" bindtap="upOrdown" />
+      </block>
+    </view>
+  </view>
+  <block wx:if="{{!show}}">
+    <view class="iongin longintro">{{longIntro}}</view>
+  </block>
+  <block wx:else>
+    <view class="iongin">{{longIntro}}</view>
+  </block>
+
+
+</view>
+
+<view class="hot">热门评论</view>
+<view wx:if="{{boolpl}}" style="text-align: center;">评论内容加载失败</view>
+<comment wx:for="{{comment}}" wx:key="index" item="{{item}}"></comment>
+
+<view class="hots">
+  <view class="hots-txt">相关推荐</view>
+  <view class="hots-txt2" bindtap="navseemore">查看更多
+    <van-icon name="arrow" size="30rpx" />
+  </view>
+</view>
+<relevant-recommend relevants="{{tools.slice(relevant.books,0,6)}}"></relevant-recommend>
+<view class="bookinfo">
+  <view class="tushu">图书信息</view>
+  <view class="copy">【{{details.copyrightInfo}}】</view>
+</view>
+
+
+<view class="btn">
+  <block wx:if="{{bookbool}}">
+    <button class="btn-one" bindtap="addbooks">加入书架</button>
+  </block>
+  <block wx:else>
+    <button class="btn-del" bindtap="removebooks">移出书架</button>
+  </block>
+  <button class="btn-two" bindtap="chapters">开始阅读</button>
+</view>

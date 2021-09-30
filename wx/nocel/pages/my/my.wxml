@@ -1,0 +1,21 @@
+<!--pages/my/my.wxml-->
+<!--index.wxml-->
+<view class="mypage">
+  <view class="itx">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userimg" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="username">
+        <open-data type="userNickName"></open-data>
+        <view class="ids">Id:123456789</view>
+      </view>
+    </block>
+  </view>
+
+  <view wx:for="{{list}}" wx:key="index" class="list">
+    <view class="itemicon"><van-icon name="{{item.icon}}" /></view>
+    <view class="itemtext">{{item.text}}</view>
+    <view class="righticon"><van-icon name="arrow" /></view>
+  </view>
+</view>

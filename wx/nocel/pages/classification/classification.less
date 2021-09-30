@@ -1,0 +1,188 @@
+// @keyframes xxx {
+//   from {
+//     // transform: translateY(0);
+//     margin-top: 0;
+//   }
+
+//   to {
+//     // transform: translateY(-980rpx);
+//     margin-top:-980rpx;
+//   }
+// }
+
+.classify {
+  display: flex;
+  height: 100vh;
+
+  .classify-left {
+    width: 160rpx;
+    box-sizing: border-box;
+    border-right: 2rpx solid rgb(216, 214, 214);
+    position: relative;
+
+    .cl-title {
+      // position: fixed;
+
+      .male {
+        view {
+          width: 80rpx;
+          height: 100rpx;
+          margin-left: 50rpx;
+          line-height: 100rpx;
+          text-align: center;
+          border-bottom: 2rpx solid gainsboro;
+        }
+      }
+
+      .female {
+        view {
+          width: 80rpx;
+          height: 100rpx;
+          margin-left: 50rpx;
+          line-height: 100rpx;
+          text-align: center;
+          border-bottom: 2rpx solid gainsboro;
+        }
+      }
+
+      .bacolor {
+        background-color: rgb(243, 243, 243);
+      }
+    }
+
+    .tran-box {
+      position: absolute;
+      top: 0;
+      left: 20rpx;
+      width: 2rpx;
+      height: 204rpx;
+
+      .box {
+        width: 2rpx;
+        height: 60rpx;
+        margin-top: 20rpx;
+        background-color: red;
+      }
+
+      .box-transition {
+        transition: all 0.1s;
+      }
+
+      .box-moved {
+        margin-top: 122rpx;
+      }
+    }
+  }
+
+  .classify-right {
+    // height: 980rpx;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 20rpx;
+    overflow: auto;
+
+    .maxbox {
+
+      .man,
+      .girl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .xian {
+          width: 200rpx;
+          height: 2rpx;
+          background-color: rgb(230, 224, 224);
+        }
+
+        .txt {
+          color: rgb(207, 201, 201);
+          font-size: 36rpx;
+
+          text {
+            height: 20rpx;
+            box-sizing: border-box;
+            display: inline-block;
+            margin-bottom: 24rpx;
+            font-size: 20rpx;
+            // line-height: 48rpx;
+            color: rgb(206, 206, 206);
+          }
+        }
+      }
+
+      .showbooks {
+        height: 980rpx;
+      }
+
+      .showbooks,
+      .showbooks2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .cl-books {
+          width: 265rpx;
+          height: 120rpx;
+          margin-bottom: 20rpx;
+          background-color: rgb(249, 249, 251);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .cl-word {
+            margin-left: 10rpx;
+            .cl-da {
+              font-size: 28rpx;
+              margin-bottom: 6rpx;
+            }
+
+            .cl-xiao {
+              font-size: 20rpx;
+              color: rgb(172, 172, 172);
+            }
+          }
+
+          .cl-img {
+            width: 120rpx;
+            height: 120rpx;
+            margin-right: 10rpx;
+            position: relative;
+
+            .img-one {
+              width: 80rpx;
+              height: 90rpx;
+              // background-color: hotpink;
+              position: absolute;
+              bottom: 0;
+              z-index: 2;
+            }
+
+            .img-two {
+              width: 80rpx;
+              height: 100rpx;
+              // background-color: rgb(255, 140, 105);
+              position: absolute;
+              bottom: 0;
+              left: 20rpx;
+              z-index: 3;
+            }
+
+            .img-three {
+              width: 80rpx;
+              height: 80rpx;
+              // background-color: rgb(105, 200, 255);
+              position: absolute;
+              bottom: 0;
+              left: 40rpx;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+    // .tranx {
+    //   animation: xxx 1s alternate 1;
+    // }
+  }
+}

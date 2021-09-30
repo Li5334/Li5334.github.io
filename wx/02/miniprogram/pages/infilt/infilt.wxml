@@ -1,0 +1,19 @@
+<!--pages/infilt/infilt.wxml-->
+<!-- <text>pages/infilt/infilt.wxml</text> -->
+
+<button type="default" bindtap="inimage">上传一张图片</button>
+<view>
+  <image style="height: 120rpx;" src="{{img}}" mode="heightFix"></image>
+</view>
+
+<button type="primary" bindtap="onimage">获得图片</button>
+<view>
+  <image style="width: 100rpx;" wx:for="{{imgs}}" wx:key="index" src="{{item}}" mode="widthFix"></image>
+</view>
+
+<button type="primary" bindtap="uploadImage">上传多张图片</button>
+<view>
+<image style="width: 100rpx;" wx:for="{{filePaths}}" wx:key="index" src="{{item}}" mode="widthFix"></image>
+</view>
+
+<button type="primary" bindtap="callFirstCloudFunction">调用第一个云函数</button>

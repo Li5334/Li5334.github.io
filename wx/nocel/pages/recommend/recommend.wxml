@@ -1,0 +1,29 @@
+<!--pages/recommend/recommend.wxml-->
+<!-- <text>pages/recommend/recommend.wxml</text> -->
+<view class="searchbox">
+  <view class="jin" bindtap="pagesearch">
+    <van-icon name="search" />
+  </view>
+  <view class="kuan" bindtap="pagesearch">请输入书本名搜索</view>
+</view>
+<view class="recom">
+  <view class="recom-title">
+    <view data-gender="male" bindtap="changeGender">男生频道</view>
+    <view data-gender="female" bindtap="changeGender">女生频道</view>
+  </view>
+  <view class="boxbig">
+    <view class="box {{extraClasses}}"></view>
+  </view>
+</view>
+
+
+<view class="nieron">
+  <swiper class="swiper" autoplay="{{true}}" indicator-dots="{{false}}" circular="{{true}}">
+    <swiper-item wx:for="{{banners[gender]}}" data-index="{{index}}" bindtap="navindex" wx:key="index">
+      <image style="width:750rpx; border-radius: 20rpx;" mode="widthFix" src="{{item.url}}"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:if="recommend[gender].length">
+    <recommend-section wx:for="{{recommend[gender]}}" wx:key="index" item="{{item}}"></recommend-section>
+  </block>
+</view>

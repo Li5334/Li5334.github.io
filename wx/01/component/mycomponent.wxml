@@ -1,0 +1,7 @@
+<!--component/mycomponent.wxml-->
+<view>
+<text bindtap="myTap">component/mycomponent.wxml</text>
+<slot></slot>
+<view>{{propA}}</view>
+<view class="propb" wx:for="{{propB}}" wx:key="*this">{{item}}</view>
+</view>

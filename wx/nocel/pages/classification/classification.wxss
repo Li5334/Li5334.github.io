@@ -1,0 +1,146 @@
+.classify {
+  display: flex;
+  height: 100vh;
+}
+.classify .classify-left {
+  width: 160rpx;
+  box-sizing: border-box;
+  border-right: 2rpx solid #d8d6d6;
+  position: relative;
+}
+.classify .classify-left .cl-title .male view {
+  width: 80rpx;
+  height: 100rpx;
+  margin-left: 50rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 2rpx solid gainsboro;
+}
+.classify .classify-left .cl-title .female view {
+  width: 80rpx;
+  height: 100rpx;
+  margin-left: 50rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 2rpx solid gainsboro;
+}
+.classify .classify-left .cl-title .bacolor {
+  background-color: #f3f3f3;
+}
+.classify .classify-left .tran-box {
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  width: 2rpx;
+  height: 204rpx;
+}
+.classify .classify-left .tran-box .box {
+  width: 2rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  background-color: red;
+}
+.classify .classify-left .tran-box .box-transition {
+  transition: all 0.1s;
+}
+.classify .classify-left .tran-box .box-moved {
+  margin-top: 122rpx;
+}
+.classify .classify-right {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  overflow: auto;
+}
+.classify .classify-right .maxbox .man,
+.classify .classify-right .maxbox .girl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.classify .classify-right .maxbox .man .xian,
+.classify .classify-right .maxbox .girl .xian {
+  width: 200rpx;
+  height: 2rpx;
+  background-color: #e6e0e0;
+}
+.classify .classify-right .maxbox .man .txt,
+.classify .classify-right .maxbox .girl .txt {
+  color: #cfc9c9;
+  font-size: 36rpx;
+}
+.classify .classify-right .maxbox .man .txt text,
+.classify .classify-right .maxbox .girl .txt text {
+  height: 20rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 24rpx;
+  font-size: 20rpx;
+  color: #cecece;
+}
+.classify .classify-right .maxbox .showbooks {
+  height: 980rpx;
+}
+.classify .classify-right .maxbox .showbooks,
+.classify .classify-right .maxbox .showbooks2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.classify .classify-right .maxbox .showbooks .cl-books,
+.classify .classify-right .maxbox .showbooks2 .cl-books {
+  width: 265rpx;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+  background-color: #f9f9fb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.classify .classify-right .maxbox .showbooks .cl-books .cl-word,
+.classify .classify-right .maxbox .showbooks2 .cl-books .cl-word {
+  margin-left: 10rpx;
+}
+.classify .classify-right .maxbox .showbooks .cl-books .cl-word .cl-da,
+.classify .classify-right .maxbox .showbooks2 .cl-books .cl-word .cl-da {
+  font-size: 28rpx;
+  margin-bottom: 6rpx;
+}
+.classify .classify-right .maxbox .showbooks .cl-books .cl-word .cl-xiao,
+.classify .classify-right .maxbox .showbooks2 .cl-books .cl-word .cl-xiao {
+  font-size: 20rpx;
+  color: #acacac;
+}
+.classify .classify-right .maxbox .showbooks .cl-books .cl-img,
+.classify .classify-right .maxbox .showbooks2 .cl-books .cl-img {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 10rpx;
+  position: relative;
+}
+.classify .classify-right .maxbox .showbooks .cl-books .cl-img .img-one,
+.classify .classify-right .maxbox .showbooks2 .cl-books .cl-img .img-one {
+  width: 80rpx;
+  height: 90rpx;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+.classify .classify-right .maxbox .showbooks .cl-books .cl-img .img-two,
+.classify .classify-right .maxbox .showbooks2 .cl-books .cl-img .img-two {
+  width: 80rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  left: 20rpx;
+  z-index: 3;
+}
+.classify .classify-right .maxbox .showbooks .cl-books .cl-img .img-three,
+.classify .classify-right .maxbox .showbooks2 .cl-books .cl-img .img-three {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 0;
+  left: 40rpx;
+  z-index: 1;
+}

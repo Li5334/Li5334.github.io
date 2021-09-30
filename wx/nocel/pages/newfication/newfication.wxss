@@ -1,0 +1,58 @@
+/* pages/newfication/newfication.wxss */
+.oneheader {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 170rpx 30rpx 20rpx;
+}
+
+.oneheader .bot {
+  display: flex;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid rgb(219, 218, 218);
+}
+
+.oneheader .bot .shufl {
+  width: 80rpx;
+  padding: 6rpx 4rpx;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: rgb(199, 199, 199);
+  border: 1px solid white;
+  border-radius: 40rpx;
+}
+
+.cored {
+  color: red !important;
+  border: 1px solid red !important;
+}
+
+.twoheader {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  padding-top: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.twoheader .bot {
+  width: 700rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid rgb(219, 218, 218);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.twoheader .bot .shufl {
+  display: inline-block;
+  /* width: 80rpx; */
+  padding: 6rpx 10rpx;
+  margin-right: 24rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: rgb(199, 199, 199);
+  border: 1px solid white;
+  border-radius: 40rpx;
+}

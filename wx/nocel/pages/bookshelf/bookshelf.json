@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "book2-item":"/components/book2-item/book2-item"
+  },
+  "navigationBarTitleText": "书架"
+}

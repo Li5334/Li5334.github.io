@@ -1,0 +1,56 @@
+<!--pages/chapters/chapters.wxml-->
+<!-- <text>pages/chapters/chapters.wxml</text> -->
+<top-bar topstyle="{{topstyle}}">{{con.title}}</top-bar>
+<view class="{{stylergb}}">
+  <view class="mask" bindtap="tapshow"></view>
+  <!-- 小说内容 -->
+  <view class="richs {{con === null?'richs2':''}}" wx:if="{{!offoron}}">
+    <rich-text nodes="{{con.cpContent}}"></rich-text>
+    <!-- <view>{{con.cpContent}}</view> -->
+
+    <view class="ri-kon">
+      <view class="ri-xia" bindtap="nextchapter">下一章</view>
+      <view class="ri-qita">
+        <view bindtap="previouschapter">上一章</view>
+        <view bindtap="catalogue2">目录</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 点击中间显示控制台 -->
+  <view class="pofiexd {{chclass}}">
+    <view class="poflex">
+      <view bindtap="previouschapter2">上一章</view>
+      <view bindtap="catalogue">目录</view>
+      <view bindtap="nextchapter2">下一章</view>
+    </view>
+    <view class="poflex">
+      <view style="background-color:  rgb(241, 238, 233); color: black;" bindtap="rgb">默认</view>
+      <view class="rgbblack" bindtap="rgbblack">夜间</view>
+      <view class="rgbgreen" bindtap="rgbgreen">护眼</view>
+    </view>
+    <view class="poflex">
+      <view>字号</view>
+      <view bindtap="reduce">Aa-</view>
+      <view bindtap="enlarge">Aa+</view>
+    </view>
+  </view>
+
+  <!-- 目录 -->
+  <view class="chapters-box" wx:if="{{offoron}}">
+    <view class="ch-box {{stylergb}}">
+      <view class="ch-mulu">章节列表（共{{chapters.length}}章）</view>
+      <view class="ch-zf" bindtap="reverse">{{reversed?'正序':'倒叙'}}</view>
+    </view>
+
+    <view class="ch-ul">
+      <view wx:for="{{chapters}}" wx:key="_id" data-order="{{item.order}}" bindtap="order"
+        class="ch-list  {{num == item.order? 'colorred':''}} {{item.isVip?'colorgren':''}}">
+        <text>{{item.order}}</text> <text>{{item.title}}</text>
+        <text wx:if="{{item.isVip}}"><van-icon name="lock" size="14px" color='red' /></text>
+      </view>
+    </view>
+
+    <view class="ch-off  {{stylergb}}" bindtap="choff">关闭</view>
+  </view>
+</view>
